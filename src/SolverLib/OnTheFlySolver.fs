@@ -160,11 +160,11 @@ type OnTheFlySolver<'S when 'S: comparison>
 
     let rec loop =
         function 
-        | [] -> printfn "Win: %A\nLose: %A" win lose; foundWinningStrategy ()
+        | [] -> foundWinningStrategy ()
         | _ when foundWinningOrLosingStrategy () -> foundWinningStrategy ()
         | (s1, i, _) :: waitrest when inWinLose (s1, i) -> loop waitrest
         | (s1, i, _) :: waitrest when inLosingStrategy (s1, i) -> addTo (s1, i) &lose waitrest |> loop
-        | (s1, i, _) :: waitrest when inWinningStrategy (s1, i) -> printfn "HELLO"; addTo (s1, i) &win waitrest |> loop
+        | (s1, i, _) :: waitrest when inWinningStrategy (s1, i) -> addTo (s1, i) &win waitrest |> loop
         | (_, i, s2) :: waitrest when inWinLose (s2, next i) -> loop waitrest
         | (s1, i, s2) :: waitrest when disc.Contains(vertexOf (s2, next i)) ->
             let v = vertexOf (s2, next i)

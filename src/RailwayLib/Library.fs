@@ -10,21 +10,26 @@ type Port =
     | P of string // Plus (default) branch of point.
     | M of string // Minus branch of point.
 
+/// A railway network is a tuple of linear segements IDs, points IDs, connections in up and down directions, signal 
+/// placement IDs, and trains' start/destination position. 
 type Network =
     | N of
-        Set<string> *  // Linear segments
-        Set<string> *  // Points
-        Map<Port, Port> *  // Connections (down to up).
-        Map<Port, Port> *  // Connections (up to down).
-        Set<string> *  // Set of signal placements.
-        Map<Port, Port> // Trains' initial and final locations.
+        Set<string> *       // Linear segments
+        Set<string> *       // Points
+        Map<Port, Port> *   // Connections (down to up).
+        Map<Port, Port> *   // Connections (up to down).
+        Set<string> *       // Set of signal placements.
+        Map<Port, Port>     // Trains' initial and final locations.
 
 module AuxilaryRailwayFunctions = 
+
+    /// Determine if a port is linear. 
     let isLinear = 
         function 
         | L _ -> true 
         | _ -> false 
 
+    /// Get the id of a port. 
     let getPortId = 
         function 
         | L id 
@@ -32,18 +37,26 @@ module AuxilaryRailwayFunctions =
         | P id 
         | M id -> id 
 
-    // Not effecient but gets the job done for small sets.
-    let rec getCombinationsFolder setCollector item =
-        match setCollector with
-        | [] -> []
-        | set :: cs ->
-            Set.add item set :: set :: getCombinationsFolder cs item
+    let getCombinations set = 
 
+        /// Use as folder with Set.fold: Get all possible combinations of elements in a set. 
+        let rec getCombinationsFolder setCollector elem =
+            match setCollector with
+            | [] -> []
+            | set :: cs ->
+                // The element can either be included in each set or not. 
+                set :: (Set.add elem set) :: (getCombinationsFolder cs elem)
+        
+        Set.fold getCombinationsFolder [ Set.empty ] set 
+
+    /// Depth-first-search through a network from a port in the direction determined by conn(ection)s map. 
     let rec dfs conns port visited = 
         if Set.contains port visited then 
             visited 
         else 
             let vs' = Set.add port visited
+
+            // Only cares about reachability: No regard of points and signals. 
             match Map.tryFind port conns with
             | None -> vs'
             | Some (L _ as p) -> dfs conns p vs' 
@@ -52,10 +65,16 @@ module AuxilaryRailwayFunctions =
             | Some (S id) -> 
                 Set.union (dfs conns (P id) vs') (dfs conns (M id) vs')
 
+    let copyArrayReplaceValue array index value =
+        let arrayCopy = Array.copy array
+        arrayCopy.[index] <- value
+        arrayCopy
+
 module ParserFunctions =
 
     open AuxilaryRailwayFunctions
 
+    /// Extract and apply port type to a point port. 
     let toPoint id = 
         function
         | "stem" -> S id
@@ -63,6 +82,7 @@ module ParserFunctions =
         | "minus" -> M id
         | s -> failwith $"\"%s{s}\" is not a recognized port kind."
 
+    /// Convert lists of conn(ection)s, signals, and trains to a railway network. 
     let toNetwork conns signals trains = 
 
         let addPortsAux (linears, points) = 
@@ -164,84 +184,68 @@ module GameFunctions =
 
     type TrainGameState =
         | TGS of
-            (Port option) array *  // Positions of trains travelling UP
-            (Port option) array *  // Positions of trains tavelling DOWN
-            Set<string> *  // Positions of signals that ALLOW passage.
-            Set<string> // Points in MINUS.
-
-    
+            (Port option) array *   // Positions of trains travelling UP
+            (Port option) array *   // Positions of trains tavelling DOWN
+            Set<string> *           // Positions of signals NOT allowing passage.
+            Set<string>             // Points in MINUS.
 
     let toSolver (N (linears, points, connsUp, connsDown, signals, trains)) =
 
+        let redSignalsConfigs = getCombinations signals
+        let minusPointsConfigs = getCombinations points 
+
+        let hasCrashed tsUp tsDown = 
+            Array.contains None tsUp || Array.contains None tsDown 
+
+        let noTrainAt port tsUp tsDown = 
+            not (Array.contains port tsUp || Array.contains port tsDown)
+
         let simRel = (=)
 
-        let edgesOne (TGS (trainsUp, trainsDown, _, _)) =
-            if Array.contains None trainsUp || Array.contains None trainsDown then 
-                Set.empty 
-            else 
-                let greenSignalsList = Set.fold getCombinationsFolder [ Set.empty ] signals
+        let edgesOne (TGS (tsUp, tsDown, _, _)) = 
+            if hasCrashed tsUp tsDown then Set.empty 
+            else                   
+                let mutable nextStates = Set.empty 
 
-                let minusPointsList = Set.fold getCombinationsFolder [ Set.empty ] points
+                for rsc in redSignalsConfigs do
+                    for mpc in minusPointsConfigs do
+                        nextStates <- 
+                            Set.add (TGS (tsUp, tsDown, rsc, mpc)) nextStates
 
-                let mutable set = Set.empty
+                nextStates
 
-                for ss in greenSignalsList do
-                    for ps in minusPointsList do
-                        set <- Set.add (TGS(trainsUp, trainsDown, ss, ps)) set
-
-                set
-
-        let edgesTwo (TGS (trainsUp, trainsDown, redSignals, minusPoints) as state) =
+        let edgesTwo (TGS (tsUp, tsDown, rss, mps) as state) =
 
             let rec move currentPos conns =
                 match currentPos with
                 | None -> None
-                | Some (L id) as pOption when Set.contains id redSignals -> pOption
+                | Some (L id) as pOpt when Set.contains id rss -> pOpt
                 | Some p ->
-                    // Can only end up at a linear section or crash.
                     match Map.tryFind p conns with
-                    | Some (L _) as pOption -> pOption
-                    | Some (P id) when not (Set.contains id minusPoints) -> move (Some (S id)) conns
-                    | Some (M id) when Set.contains id minusPoints -> move (Some(S id)) conns
-                    | Some (S id) when Set.contains id minusPoints -> move (Some(M id)) conns
+                    | Some (L _) as pOpt when noTrainAt pOpt tsDown tsDown -> pOpt
+                    | Some (P id) when not (Set.contains id mps) -> move (Some (S id)) conns
+                    | Some (M id) when Set.contains id mps -> move (Some(S id)) conns
+                    | Some (S id) when Set.contains id mps -> move (Some(M id)) conns
                     | Some (S id) -> move (Some (P id)) conns
                     | _ -> None
 
-            let copyArrayReplaceValue array index value =
-                let arrayCopy = Array.copy array
-                arrayCopy.[index] <- value
-                arrayCopy
-
-            let mutable set = Set.empty
-
-            if Array.contains None trainsUp || Array.contains None trainsDown then 
-                Set.empty 
+            if hasCrashed tsUp tsDown then Set.empty 
             else 
-                for i in [ 0 .. Array.length trainsUp - 1 ] do
-                    set <-
-                        Set.add
-                            (TGS(
-                                move trainsUp.[i] connsUp
-                                |> copyArrayReplaceValue trainsUp i,
-                                trainsDown,
-                                redSignals,
-                                minusPoints
-                            ))
-                            set
+                let mutable nextStates = Set.empty
 
-                for j in [ 0 .. Array.length trainsDown - 1 ] do
-                    set <-
-                        Set.add
-                            (TGS(
-                                trainsUp,
-                                move trainsDown.[j] connsDown
-                                |> copyArrayReplaceValue trainsDown j,
-                                redSignals,
-                                minusPoints
-                            ))
-                            set
+                for i in [ 0 .. Array.length tsUp - 1 ] do
+                    let tsUp' = move tsUp.[i] connsUp |> copyArrayReplaceValue tsUp i
 
-                Set.filter (fun s -> s <> state) set
+                    if tsUp' <> tsUp then
+                        nextStates <- Set.add (TGS (tsUp', tsDown, rss, mps)) nextStates
+
+                for j in [ 0 .. Array.length tsDown - 1 ] do
+                    let tsDown' = move tsDown.[j] connsDown |> copyArrayReplaceValue tsDown j
+
+                    if tsDown' <> tsDown then 
+                        nextStates <- Set.add (TGS (tsUp, tsDown', rss, mps)) nextStates
+
+                nextStates
                 
 
         let isTravellingUp start dest = 
@@ -252,11 +256,13 @@ module GameFunctions =
         let trainsUp, trainsDown = 
             Map.fold
                 (fun (ups, downs) start final -> 
-                    // TODO Fix: What if the final location cannot be reached at all?
+                    let tupleOpt = Some start, Some final 
+
+                    // Assumes all trains can reach their destination. 
                     if dfs connsUp start Set.empty |> Set.contains final then 
-                        (Some start, Some final) :: ups, downs 
+                        tupleOpt :: ups, downs 
                     else 
-                        ups, (Some start, Some final) :: downs)
+                        ups, tupleOpt :: downs)
                 ([], [])
                 trains 
         
