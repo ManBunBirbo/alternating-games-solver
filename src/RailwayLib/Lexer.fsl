@@ -1,0 +1,39 @@
+{ // Do not indent. 
+module Lexer 
+
+open FSharp.Text.Lexing 
+open System 
+open Parser 
+
+// Set the language to English such that 4.0 is parsed as 4 and not 40.
+System.Globalization.CultureInfo.CurrentCulture <- 
+    new System.Globalization.CultureInfo("en-US")
+
+exception SyntaxError of string
+
+let lexeme = LexBuffer<_>.LexemeString
+
+let newline (lexbuf: LexBuffer<_>) = 
+    lexbuf.EndPos <- lexbuf.EndPos.NextLine
+}
+
+let id = ['a'-'z''A'-'Z']['a'-'z''A'-'Z''0'-'9']*
+let whitespace = [' ' '\t']+
+let newline = '\r' | '\n' | "\r\n"
+let port = "up" | "down" | "stem" | "plus" | "minus"
+
+rule tokenize = parse 
+    | whitespace { tokenize lexbuf }
+    | newline { newline lexbuf; tokenize lexbuf }
+    | "connections" { CONNECTIONS } 
+    | "signals" { SIGNALS } 
+    | "trains" { TRAINS } 
+    | "->" { ARROW } 
+    | '=' { EQUALS } 
+    | '.' { DOT }
+    | ',' { COMMA }
+    | port { PORTKIND (lexeme lexbuf) }
+    | id { ID (lexeme lexbuf) } 
+    | eof { EOF }
+    | _ { raise (Exception (sprintf "SyntaxError: Unexpected char: '%s' Line: %d, Column: %d" (lexeme lexbuf) lexbuf.EndPos.Line lexbuf.EndPos.Column)) }
+    

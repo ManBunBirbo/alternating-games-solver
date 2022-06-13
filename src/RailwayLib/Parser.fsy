@@ -1,0 +1,41 @@
+// Inspired by practical assignment in course 02141 Data Science Modelling and 
+// FsLexYacc example from [fsylexyacc]. 
+
+%{ %} // Run code. !!! DO NOT REMOVE !!!
+
+%token <string> ID 
+%token <string> PORTKIND 
+%token CONNECTIONS SIGNALS TRAINS
+%token EQUALS ARROW DOT COMMA 
+%token EOF 
+
+%start start 
+
+%type <Network> start 
+
+%% // Seperate tokens and rules. !!! DO NOT REMOVE !!!
+
+start: connections signals trains EOF { ParserFunctions.toNetwork $1 $2 $3 }
+
+connections: CONNECTIONS EQUALS connection_list { $3 } 
+connection_list: 
+    | connection { [ $1 ] } 
+    | connection COMMA connection_list  { $1 :: $3 }
+connection: port ARROW port { ($1, $3) }
+port: 
+    | ID { (L $1) }
+    | ID DOT PORTKIND { ParserFunctions.toPoint $1 $3 } 
+
+signals: SIGNALS EQUALS signal_list { $3 }
+signal_list: 
+    | { [ ] }
+    | ID { [ $1 ] }
+    | ID COMMA signal_list { $1 :: $3 }
+
+trains: TRAINS EQUALS train_list { $3 }
+train_list: 
+    | train { [ $1 ] }
+    | train COMMA train_list { $1 :: $3  }
+train: ID ARROW ID { ($1, $3) }
+
+%% // EOF. !!! DO NOT REMOVE !!!

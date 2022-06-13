@@ -1,0 +1,16 @@
+# Editor config folders.
+.ionide/
+.idea/
+.vs/
+.vscode/*
+!.vscode/settings.json
+
+# F# build results.
+**/[Bb]in/
+**/[Oo]bj/
+
+# Lexer and paser builds. 
+Lexer.fs
+Parser.fs 
+Parser.fsi
+.fake

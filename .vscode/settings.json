@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        ".vscode": true,
+        "**/.idea": true,
+        "**/.ionide": true,
+        "**/bin": true,
+        "**/obj": true,
+        "src/RailwayLib/Lexer.fs": true,
+        "src/RailwayLib/Parser.fs": true,
+        "src/RailwayLib/Parser.fsi": true
+    },
+    "editor.inlayHints.enabled": "offUnlessPressed"
+}

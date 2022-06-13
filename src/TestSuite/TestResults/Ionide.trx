@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="9e355f83-92d5-438c-a874-0085ac68ed77" name="@thinkpad-t460s 2022-06-13 13:24:27" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-06-13T13:24:27.6400674+02:00" queuing="2022-06-13T13:24:27.6400676+02:00" start="2022-06-13T13:24:25.0723678+02:00" finish="2022-06-13T13:24:27.6594564+02:00" />
+  <TestSettings name="default" id="ca314cf4-0d4d-48de-a59c-e80bb12be605">
+    <Deployment runDeploymentRoot="_thinkpad-t460s_2022-06-13_13_24_27" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="609ded5f-4b0f-4150-bea0-9e90688bc1b7" testId="9beefca3-eed2-7e1a-a77f-18ef8a57e939" testName="OnTheFlySolverTests.please" computerName="thinkpad-t460s" duration="00:00:00.3015642" startTime="2022-06-13T13:24:27.4712971+02:00" endTime="2022-06-13T13:24:27.4713665+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="609ded5f-4b0f-4150-bea0-9e90688bc1b7" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="OnTheFlySolverTests.please" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="9beefca3-eed2-7e1a-a77f-18ef8a57e939">
+      <Execution id="609ded5f-4b0f-4150-bea0-9e90688bc1b7" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="please" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="9beefca3-eed2-7e1a-a77f-18ef8a57e939" executionId="609ded5f-4b0f-4150-bea0-9e90688bc1b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 6.0.5)
+[xUnit.net 00:00:00.84]   Discovering: TestSuite
+[xUnit.net 00:00:00.92]   Discovered:  TestSuite
+[xUnit.net 00:00:00.93]   Starting:    TestSuite
+[xUnit.net 00:00:01.34]   Finished:    TestSuite
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

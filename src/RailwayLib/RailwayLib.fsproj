@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <FsLexToolExe>fslex.dll</FsLexToolExe>
+    <FsYaccToolExe>fsyacc.dll</FsYaccToolExe>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+    <FsYacc Include="Parser.fsy">
+      <OtherFlags>--module Parser --open "RailwayLib"</OtherFlags>
+    </FsYacc>
+    <FsLex Include="Lexer.fsl">
+      <OtherFlags>--unicode</OtherFlags>
+    </FsLex>
+    <Compile Include="Parser.fsi" />
+    <Compile Include="Parser.fs" />
+    <Compile Include="Lexer.fs" />
+    <Compile Include="Extra.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FsLexYacc" Version="10.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SolverLib\SolverLib.fsproj" />
+  </ItemGroup>
+</Project>
