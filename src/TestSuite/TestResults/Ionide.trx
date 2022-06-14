@@ -1,105 +1,111 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="860619b4-8074-4a90-a016-91fcd5dab40f" name="@thinkpad-t460s 2022-06-13 16:03:04" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2022-06-13T16:03:04.1737016+02:00" queuing="2022-06-13T16:03:04.1737018+02:00" start="2022-06-13T16:03:01.7713204+02:00" finish="2022-06-13T16:03:04.2827362+02:00" />
-  <TestSettings name="default" id="db729944-8088-4e6b-8c8a-5979fe6d4b02">
-    <Deployment runDeploymentRoot="_thinkpad-t460s_2022-06-13_16_03_04" />
+<TestRun id="86c84457-acf3-40b9-80e0-63745c90513e" name="@thinkpad-t460s 2022-06-14 12:10:58" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-06-14T12:10:58.7557226+02:00" queuing="2022-06-14T12:10:58.7557228+02:00" start="2022-06-14T12:10:53.5127674+02:00" finish="2022-06-14T12:10:59.0312304+02:00" />
+  <TestSettings name="default" id="c7349c5e-e3f2-4c96-bd13-27413843d021">
+    <Deployment runDeploymentRoot="_thinkpad-t460s_2022-06-14_12_10_58" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="b201d3a6-5c6e-4f65-9f56-cb0d2fb754b1" testId="c1df1f25-c66d-bba0-f8d4-66642d076c45" testName="OnTheFlySolverTests.comeOn" computerName="thinkpad-t460s" duration="00:00:00.0813547" startTime="2022-06-13T16:03:04.1444316+02:00" endTime="2022-06-13T16:03:04.1444316+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b201d3a6-5c6e-4f65-9f56-cb0d2fb754b1" />
-    <UnitTestResult executionId="c2bd594c-bcf6-4ca7-aeb9-cf1bb2bd4a8f" testId="bf9aa688-b5eb-d25a-3530-850d22e84072" testName="Tests.Kasting example railway." computerName="thinkpad-t460s" duration="00:00:00.1103387" startTime="2022-06-13T16:03:04.1182360+02:00" endTime="2022-06-13T16:03:04.1182360+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2bd594c-bcf6-4ca7-aeb9-cf1bb2bd4a8f" />
-    <UnitTestResult executionId="3ae496f9-1dcb-4115-a3d2-477298463a7b" testId="6939d5c8-a37d-34cd-9829-06e57957e46a" testName="OnTheFlySolverTests.On-the-fly solver solves simple, legal game" computerName="thinkpad-t460s" duration="00:00:00.0062819" startTime="2022-06-13T16:03:04.1181640+02:00" endTime="2022-06-13T16:03:04.1181640+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ae496f9-1dcb-4115-a3d2-477298463a7b" />
-    <UnitTestResult executionId="11fc3c55-8e96-44ef-a62a-113023d20b54" testId="9beefca3-eed2-7e1a-a77f-18ef8a57e939" testName="OnTheFlySolverTests.please" computerName="thinkpad-t460s" duration="00:00:00.0338055" startTime="2022-06-13T16:03:04.1784154+02:00" endTime="2022-06-13T16:03:04.1784154+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="11fc3c55-8e96-44ef-a62a-113023d20b54" />
-    <UnitTestResult executionId="23197061-ea01-46b1-9740-2e63becf3cd0" testId="b1895ca8-decb-c86f-af62-c390edbc5d89" testName="OnTheFlySolverTests.On-the-fly solver cannot solve simple, illegal game" computerName="thinkpad-t460s" duration="00:00:00.0716220" startTime="2022-06-13T16:03:04.1180890+02:00" endTime="2022-06-13T16:03:04.1180891+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="23197061-ea01-46b1-9740-2e63becf3cd0" />
-    <UnitTestResult executionId="3d57fbd6-056b-489d-b1d8-bf829e13a26e" testId="d0c1de24-7223-1a66-7af5-da43a5782c36" testName="LiuSmolkaTests.Small disconnected example Exploring small area" computerName="thinkpad-t460s" duration="00:00:00.0003643" startTime="2022-06-13T16:03:04.0473745+02:00" endTime="2022-06-13T16:03:04.0473745+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d57fbd6-056b-489d-b1d8-bf829e13a26e" />
-    <UnitTestResult executionId="4445d35a-11cc-4d63-bf2b-ba9c187ab065" testId="221fe11a-9a4d-c1f7-6d1d-ff63b6d9dc16" testName="LiuSmolkaTests.Modified LiuSmolka example All explored All One Always" computerName="thinkpad-t460s" duration="00:00:00.0406281" startTime="2022-06-13T16:03:04.0341143+02:00" endTime="2022-06-13T16:03:04.0341746+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4445d35a-11cc-4d63-bf2b-ba9c187ab065" />
-    <UnitTestResult executionId="04ed2fcb-79bb-47b7-8fe4-81b554a5433e" testId="cddc0bec-6912-ca01-3c6a-61b57b7eab57" testName="LiuSmolkaTests.Simple dep graph All explored All One From node 0" computerName="thinkpad-t460s" duration="00:00:00.0003461" startTime="2022-06-13T16:03:04.0472472+02:00" endTime="2022-06-13T16:03:04.0472473+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04ed2fcb-79bb-47b7-8fe4-81b554a5433e" />
-    <UnitTestResult executionId="176f260c-0816-4c18-9794-1141dea15791" testId="bc5250c7-91ad-90f4-b611-5499a9341ad5" testName="Horn.Tests.Simple false Horn formula" computerName="thinkpad-t460s" duration="00:00:00.0403311" startTime="2022-06-13T16:03:04.0448702+02:00" endTime="2022-06-13T16:03:04.0448703+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="176f260c-0816-4c18-9794-1141dea15791" />
-    <UnitTestResult executionId="3ba96862-0e07-448f-86c7-723a1eb4b88a" testId="32e6bbd0-8af0-e2ec-20e5-e93b277e3ff5" testName="LiuSmolkaTests.Small disconnected example Exploring bigger area" computerName="thinkpad-t460s" duration="00:00:00.0004815" startTime="2022-06-13T16:03:04.0474529+02:00" endTime="2022-06-13T16:03:04.0474530+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ba96862-0e07-448f-86c7-723a1eb4b88a" />
-    <UnitTestResult executionId="f8e12eca-abd8-400f-9b67-312004d6fbc2" testId="03f13e36-fd41-29c8-d37e-72719ed2c674" testName="LiuSmolkaTests.Simple dep graph Node 1 explored and One Node 0 Unknown From node 1" computerName="thinkpad-t460s" duration="00:00:00.0002499" startTime="2022-06-13T16:03:04.0475923+02:00" endTime="2022-06-13T16:03:04.0475924+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f8e12eca-abd8-400f-9b67-312004d6fbc2" />
-    <UnitTestResult executionId="ee116dea-6f2c-46ec-8ba4-7b631c79b770" testId="2d61aed0-36c6-770d-6ef6-61541ffaea7b" testName="LiuSmolkaTests.LiuSmolka Example All Explored From any init node" computerName="thinkpad-t460s" duration="00:00:00.0005295" startTime="2022-06-13T16:03:04.1175724+02:00" endTime="2022-06-13T16:03:04.1175725+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee116dea-6f2c-46ec-8ba4-7b631c79b770" />
-    <UnitTestResult executionId="bbdfa1c2-0b46-4024-9ed1-f44c3976e7eb" testId="3ace7d70-9d4b-c4c4-2d6b-f2038847192b" testName="Horn.Tests.Simple true Horn formula" computerName="thinkpad-t460s" duration="00:00:00.0025824" startTime="2022-06-13T16:03:04.1179561+02:00" endTime="2022-06-13T16:03:04.1179562+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bbdfa1c2-0b46-4024-9ed1-f44c3976e7eb" />
+    <UnitTestResult executionId="f3c6ff5c-d2aa-47b0-ab94-0e0fb3d530a2" testId="b1895ca8-decb-c86f-af62-c390edbc5d89" testName="OnTheFlySolverTests.On-the-fly solver cannot solve simple, illegal game" computerName="thinkpad-t460s" duration="00:00:00.3256230" startTime="2022-06-14T12:10:58.6875088+02:00" endTime="2022-06-14T12:10:58.6875089+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3c6ff5c-d2aa-47b0-ab94-0e0fb3d530a2" />
+    <UnitTestResult executionId="d554abec-f0a8-4c8f-a97f-6cebe4d85374" testId="bf9aa688-b5eb-d25a-3530-850d22e84072" testName="Tests.Kasting example railway." computerName="thinkpad-t460s" duration="00:00:00.0116960" startTime="2022-06-14T12:10:58.6943091+02:00" endTime="2022-06-14T12:10:58.6943092+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d554abec-f0a8-4c8f-a97f-6cebe4d85374" />
+    <UnitTestResult executionId="d35d98f7-aebe-4d1e-90d1-2664a26e32a8" testId="9beefca3-eed2-7e1a-a77f-18ef8a57e939" testName="OnTheFlySolverTests.please" computerName="thinkpad-t460s" duration="00:00:00.0339688" startTime="2022-06-14T12:10:58.8090747+02:00" endTime="2022-06-14T12:10:58.8090748+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d35d98f7-aebe-4d1e-90d1-2664a26e32a8" />
+    <UnitTestResult executionId="b4eb89a0-1418-42b2-9a61-0976d5956887" testId="3ace7d70-9d4b-c4c4-2d6b-f2038847192b" testName="Horn.Tests.Simple true Horn formula" computerName="thinkpad-t460s" duration="00:00:00.0101232" startTime="2022-06-14T12:10:58.4937215+02:00" endTime="2022-06-14T12:10:58.4937216+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b4eb89a0-1418-42b2-9a61-0976d5956887" />
+    <UnitTestResult executionId="dd4c408a-a60c-4b58-96be-2d42c115053a" testId="d0c1de24-7223-1a66-7af5-da43a5782c36" testName="LiuSmolkaTests.Small disconnected example Exploring small area" computerName="thinkpad-t460s" duration="00:00:00.0005699" startTime="2022-06-14T12:10:58.4939838+02:00" endTime="2022-06-14T12:10:58.4939839+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd4c408a-a60c-4b58-96be-2d42c115053a" />
+    <UnitTestResult executionId="8b6532d6-8254-477a-839b-edaf2c2d2fc0" testId="bc5250c7-91ad-90f4-b611-5499a9341ad5" testName="Horn.Tests.Simple false Horn formula" computerName="thinkpad-t460s" duration="00:00:00.2027308" startTime="2022-06-14T12:10:58.4244733+02:00" endTime="2022-06-14T12:10:58.4245906+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b6532d6-8254-477a-839b-edaf2c2d2fc0" />
+    <UnitTestResult executionId="451a2a80-c892-4b4d-b6ea-29955a99bdc9" testId="03f13e36-fd41-29c8-d37e-72719ed2c674" testName="LiuSmolkaTests.Simple dep graph Node 1 explored and One Node 0 Unknown From node 1" computerName="thinkpad-t460s" duration="00:00:00.0048426" startTime="2022-06-14T12:10:58.4942162+02:00" endTime="2022-06-14T12:10:58.4942164+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="451a2a80-c892-4b4d-b6ea-29955a99bdc9" />
+    <UnitTestResult executionId="15733661-d9db-4493-abfe-41afcff607f6" testId="c1df1f25-c66d-bba0-f8d4-66642d076c45" testName="OnTheFlySolverTests.comeOn" computerName="thinkpad-t460s" duration="00:00:00.2365627" startTime="2022-06-14T12:10:58.7768556+02:00" endTime="2022-06-14T12:10:58.7768558+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="15733661-d9db-4493-abfe-41afcff607f6" />
+    <UnitTestResult executionId="8a31c894-c5d0-4a0d-aba3-2567597fe334" testId="2d61aed0-36c6-770d-6ef6-61541ffaea7b" testName="LiuSmolkaTests.LiuSmolka Example All Explored From any init node" computerName="thinkpad-t460s" duration="00:00:00.0008359" startTime="2022-06-14T12:10:58.6869461+02:00" endTime="2022-06-14T12:10:58.6869464+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8a31c894-c5d0-4a0d-aba3-2567597fe334" />
+    <UnitTestResult executionId="7d9a3e0e-573f-4a60-a5b2-3964c0f5b127" testId="221fe11a-9a4d-c1f7-6d1d-ff63b6d9dc16" testName="LiuSmolkaTests.Modified LiuSmolka example All explored All One Always" computerName="thinkpad-t460s" duration="00:00:00.1975378" startTime="2022-06-14T12:10:58.4931382+02:00" endTime="2022-06-14T12:10:58.4931383+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d9a3e0e-573f-4a60-a5b2-3964c0f5b127" />
+    <UnitTestResult executionId="4e44d9a4-1998-40fa-90fa-908874b4952f" testId="cddc0bec-6912-ca01-3c6a-61b57b7eab57" testName="LiuSmolkaTests.Simple dep graph All explored All One From node 0" computerName="thinkpad-t460s" duration="00:00:00.0005464" startTime="2022-06-14T12:10:58.4938705+02:00" endTime="2022-06-14T12:10:58.4938706+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e44d9a4-1998-40fa-90fa-908874b4952f" />
+    <UnitTestResult executionId="c92a0b55-a8bd-4008-bf73-4c73c48245aa" testId="60211063-8b4f-527e-35cb-ca54f9fc1722" testName="Tests.yesSir" computerName="thinkpad-t460s" duration="00:00:00.4892821" startTime="2022-06-14T12:10:58.6877841+02:00" endTime="2022-06-14T12:10:58.6877842+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c92a0b55-a8bd-4008-bf73-4c73c48245aa" />
+    <UnitTestResult executionId="2e4975b2-1fe9-4351-9c61-257e35fda6f7" testId="6939d5c8-a37d-34cd-9829-06e57957e46a" testName="OnTheFlySolverTests.On-the-fly solver solves simple, legal game" computerName="thinkpad-t460s" duration="00:00:00.0193264" startTime="2022-06-14T12:10:58.6876614+02:00" endTime="2022-06-14T12:10:58.6876615+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e4975b2-1fe9-4351-9c61-257e35fda6f7" />
+    <UnitTestResult executionId="73ad86cc-60c7-4407-bae5-819f47c5ae3a" testId="32e6bbd0-8af0-e2ec-20e5-e93b277e3ff5" testName="LiuSmolkaTests.Small disconnected example Exploring bigger area" computerName="thinkpad-t460s" duration="00:00:00.0100341" startTime="2022-06-14T12:10:58.4940914+02:00" endTime="2022-06-14T12:10:58.4940923+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73ad86cc-60c7-4407-bae5-819f47c5ae3a" />
   </Results>
   <TestDefinitions>
+    <UnitTest name="Tests.yesSir" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="60211063-8b4f-527e-35cb-ca54f9fc1722">
+      <Execution id="c92a0b55-a8bd-4008-bf73-4c73c48245aa" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="yesSir" />
+    </UnitTest>
     <UnitTest name="OnTheFlySolverTests.On-the-fly solver cannot solve simple, illegal game" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="b1895ca8-decb-c86f-af62-c390edbc5d89">
-      <Execution id="23197061-ea01-46b1-9740-2e63becf3cd0" />
+      <Execution id="f3c6ff5c-d2aa-47b0-ab94-0e0fb3d530a2" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="On-the-fly solver cannot solve simple, illegal game" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.Simple dep graph All explored All One From node 0" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="cddc0bec-6912-ca01-3c6a-61b57b7eab57">
-      <Execution id="04ed2fcb-79bb-47b7-8fe4-81b554a5433e" />
+      <Execution id="4e44d9a4-1998-40fa-90fa-908874b4952f" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="Simple dep graph All explored All One From node 0" />
     </UnitTest>
     <UnitTest name="Horn.Tests.Simple false Horn formula" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="bc5250c7-91ad-90f4-b611-5499a9341ad5">
-      <Execution id="176f260c-0816-4c18-9794-1141dea15791" />
+      <Execution id="8b6532d6-8254-477a-839b-edaf2c2d2fc0" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Horn.Tests" name="Simple false Horn formula" />
     </UnitTest>
     <UnitTest name="OnTheFlySolverTests.comeOn" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="c1df1f25-c66d-bba0-f8d4-66642d076c45">
-      <Execution id="b201d3a6-5c6e-4f65-9f56-cb0d2fb754b1" />
+      <Execution id="15733661-d9db-4493-abfe-41afcff607f6" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="comeOn" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.Small disconnected example Exploring small area" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="d0c1de24-7223-1a66-7af5-da43a5782c36">
-      <Execution id="3d57fbd6-056b-489d-b1d8-bf829e13a26e" />
+      <Execution id="dd4c408a-a60c-4b58-96be-2d42c115053a" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="Small disconnected example Exploring small area" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.Modified LiuSmolka example All explored All One Always" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="221fe11a-9a4d-c1f7-6d1d-ff63b6d9dc16">
-      <Execution id="4445d35a-11cc-4d63-bf2b-ba9c187ab065" />
+      <Execution id="7d9a3e0e-573f-4a60-a5b2-3964c0f5b127" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="Modified LiuSmolka example All explored All One Always" />
     </UnitTest>
     <UnitTest name="OnTheFlySolverTests.please" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="9beefca3-eed2-7e1a-a77f-18ef8a57e939">
-      <Execution id="11fc3c55-8e96-44ef-a62a-113023d20b54" />
+      <Execution id="d35d98f7-aebe-4d1e-90d1-2664a26e32a8" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="please" />
     </UnitTest>
     <UnitTest name="OnTheFlySolverTests.On-the-fly solver solves simple, legal game" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="6939d5c8-a37d-34cd-9829-06e57957e46a">
-      <Execution id="3ae496f9-1dcb-4115-a3d2-477298463a7b" />
+      <Execution id="2e4975b2-1fe9-4351-9c61-257e35fda6f7" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="On-the-fly solver solves simple, legal game" />
     </UnitTest>
     <UnitTest name="Horn.Tests.Simple true Horn formula" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="3ace7d70-9d4b-c4c4-2d6b-f2038847192b">
-      <Execution id="bbdfa1c2-0b46-4024-9ed1-f44c3976e7eb" />
+      <Execution id="b4eb89a0-1418-42b2-9a61-0976d5956887" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Horn.Tests" name="Simple true Horn formula" />
     </UnitTest>
     <UnitTest name="Tests.Kasting example railway." storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="bf9aa688-b5eb-d25a-3530-850d22e84072">
-      <Execution id="c2bd594c-bcf6-4ca7-aeb9-cf1bb2bd4a8f" />
+      <Execution id="d554abec-f0a8-4c8f-a97f-6cebe4d85374" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests.Kasting example railway" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.LiuSmolka Example All Explored From any init node" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="2d61aed0-36c6-770d-6ef6-61541ffaea7b">
-      <Execution id="ee116dea-6f2c-46ec-8ba4-7b631c79b770" />
+      <Execution id="8a31c894-c5d0-4a0d-aba3-2567597fe334" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="LiuSmolka Example All Explored From any init node" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.Small disconnected example Exploring bigger area" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="32e6bbd0-8af0-e2ec-20e5-e93b277e3ff5">
-      <Execution id="3ba96862-0e07-448f-86c7-723a1eb4b88a" />
+      <Execution id="73ad86cc-60c7-4407-bae5-819f47c5ae3a" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="Small disconnected example Exploring bigger area" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.Simple dep graph Node 1 explored and One Node 0 Unknown From node 1" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="03f13e36-fd41-29c8-d37e-72719ed2c674">
-      <Execution id="f8e12eca-abd8-400f-9b67-312004d6fbc2" />
+      <Execution id="451a2a80-c892-4b4d-b6ea-29955a99bdc9" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="Simple dep graph Node 1 explored and One Node 0 Unknown From node 1" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="c1df1f25-c66d-bba0-f8d4-66642d076c45" executionId="b201d3a6-5c6e-4f65-9f56-cb0d2fb754b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="bf9aa688-b5eb-d25a-3530-850d22e84072" executionId="c2bd594c-bcf6-4ca7-aeb9-cf1bb2bd4a8f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="6939d5c8-a37d-34cd-9829-06e57957e46a" executionId="3ae496f9-1dcb-4115-a3d2-477298463a7b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="9beefca3-eed2-7e1a-a77f-18ef8a57e939" executionId="11fc3c55-8e96-44ef-a62a-113023d20b54" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b1895ca8-decb-c86f-af62-c390edbc5d89" executionId="23197061-ea01-46b1-9740-2e63becf3cd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="d0c1de24-7223-1a66-7af5-da43a5782c36" executionId="3d57fbd6-056b-489d-b1d8-bf829e13a26e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="221fe11a-9a4d-c1f7-6d1d-ff63b6d9dc16" executionId="4445d35a-11cc-4d63-bf2b-ba9c187ab065" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cddc0bec-6912-ca01-3c6a-61b57b7eab57" executionId="04ed2fcb-79bb-47b7-8fe4-81b554a5433e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="bc5250c7-91ad-90f4-b611-5499a9341ad5" executionId="176f260c-0816-4c18-9794-1141dea15791" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="32e6bbd0-8af0-e2ec-20e5-e93b277e3ff5" executionId="3ba96862-0e07-448f-86c7-723a1eb4b88a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="03f13e36-fd41-29c8-d37e-72719ed2c674" executionId="f8e12eca-abd8-400f-9b67-312004d6fbc2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="2d61aed0-36c6-770d-6ef6-61541ffaea7b" executionId="ee116dea-6f2c-46ec-8ba4-7b631c79b770" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="3ace7d70-9d4b-c4c4-2d6b-f2038847192b" executionId="bbdfa1c2-0b46-4024-9ed1-f44c3976e7eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b1895ca8-decb-c86f-af62-c390edbc5d89" executionId="f3c6ff5c-d2aa-47b0-ab94-0e0fb3d530a2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bf9aa688-b5eb-d25a-3530-850d22e84072" executionId="d554abec-f0a8-4c8f-a97f-6cebe4d85374" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9beefca3-eed2-7e1a-a77f-18ef8a57e939" executionId="d35d98f7-aebe-4d1e-90d1-2664a26e32a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3ace7d70-9d4b-c4c4-2d6b-f2038847192b" executionId="b4eb89a0-1418-42b2-9a61-0976d5956887" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d0c1de24-7223-1a66-7af5-da43a5782c36" executionId="dd4c408a-a60c-4b58-96be-2d42c115053a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc5250c7-91ad-90f4-b611-5499a9341ad5" executionId="8b6532d6-8254-477a-839b-edaf2c2d2fc0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03f13e36-fd41-29c8-d37e-72719ed2c674" executionId="451a2a80-c892-4b4d-b6ea-29955a99bdc9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c1df1f25-c66d-bba0-f8d4-66642d076c45" executionId="15733661-d9db-4493-abfe-41afcff607f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d61aed0-36c6-770d-6ef6-61541ffaea7b" executionId="8a31c894-c5d0-4a0d-aba3-2567597fe334" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="221fe11a-9a4d-c1f7-6d1d-ff63b6d9dc16" executionId="7d9a3e0e-573f-4a60-a5b2-3964c0f5b127" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cddc0bec-6912-ca01-3c6a-61b57b7eab57" executionId="4e44d9a4-1998-40fa-90fa-908874b4952f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60211063-8b4f-527e-35cb-ca54f9fc1722" executionId="c92a0b55-a8bd-4008-bf73-4c73c48245aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6939d5c8-a37d-34cd-9829-06e57957e46a" executionId="2e4975b2-1fe9-4351-9c61-257e35fda6f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="32e6bbd0-8af0-e2ec-20e5-e93b277e3ff5" executionId="73ad86cc-60c7-4407-bae5-819f47c5ae3a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
   <ResultSummary outcome="Completed">
-    <Counters total="13" executed="13" passed="13" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Counters total="14" executed="14" passed="14" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
       <StdOut>[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 6.0.5)
-[xUnit.net 00:00:00.82]   Discovering: TestSuite
-[xUnit.net 00:00:00.91]   Discovered:  TestSuite
-[xUnit.net 00:00:00.91]   Starting:    TestSuite
-[xUnit.net 00:00:01.21]   Finished:    TestSuite
+[xUnit.net 00:00:01.36]   Discovering: TestSuite
+[xUnit.net 00:00:01.50]   Discovered:  TestSuite
+[xUnit.net 00:00:01.51]   Starting:    TestSuite
+[xUnit.net 00:00:02.37]   Finished:    TestSuite
 </StdOut>
     </Output>
   </ResultSummary>

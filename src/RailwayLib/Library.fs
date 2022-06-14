@@ -19,7 +19,7 @@ type Network =
         Map<Port, Port> *   // Connections (down to up).
         Map<Port, Port> *   // Connections (up to down).
         Set<string> *       // Set of signal placements.
-        Map<Port, Port>     // Trains' initial and final locations.
+        Map<string, string> // Trains' initial and final locations.
 
 module AuxilaryRailwayFunctions = 
 
@@ -36,6 +36,8 @@ module AuxilaryRailwayFunctions =
         | S id 
         | P id 
         | M id -> id 
+    
+    let portWithId id port = getPortId port = id
 
     let getCombinations set = 
 
@@ -54,16 +56,20 @@ module AuxilaryRailwayFunctions =
         if Set.contains port visited then 
             visited 
         else 
-            let vs' = Set.add port visited
-
-            // Only cares about reachability: No regard of points and signals. 
-            match Map.tryFind port conns with
-            | None -> vs'
-            | Some (L _ as p) -> dfs conns p vs' 
-            | Some (M id) 
-            | Some (P id) -> dfs conns (S id) vs'
-            | Some (S id) -> 
-                Set.union (dfs conns (P id) vs') (dfs conns (M id) vs')
+            getNeighbours port conns 
+            |> recNeighbors conns (Set.add port visited)     
+    and getNeighbours port conns = 
+        match Map.tryFind port conns with
+        | None -> [ ]
+        | Some (L _ as p) -> [ p ]
+        | Some (M id) 
+        | Some (P id) -> [ (S id) ]
+        | Some (S id) -> [ (P id); (M id) ]
+    and recNeighbors conns visited = 
+        function  
+        | [] -> visited
+        | p :: ns -> recNeighbors conns (dfs conns p visited) ns
+    
 
     let copyArrayReplaceValue array index value =
         let arrayCopy = Array.copy array
@@ -107,75 +113,100 @@ module ParserFunctions =
         
         let signals = Set.ofList signals 
 
-        let trainsPoss = List.map (fun (id1, id2) -> L id1, L id2) trains |> Map.ofList
+        let trainsPoss = Map.ofList trains
 
         N (linears, points, connsUp, connsDown, signals, trainsPoss)
 
-// /// Library of functions checking if a network is well-formed.
-// module NetworkFunctions =
+/// Library of functions checking if a network is well-formed.
+module NetworkFunctions =
 
-//     let isLinear = function
-//         | L _ -> true
-//         | _ -> false
+    open AuxilaryRailwayFunctions
 
-//     let connectionInvariant port1 port2 =
-//         match port1, port2 with
-//         | p1, p2 when isLinear p1 || isLinear p2 -> true
-//         | _ -> false
+    let connectionInvariant port1 port2 =
+        // Point ports must be connected to linear segments. Linear segments 
+        // can be connected to anything. 
+        match port1, port2 with
+        | p1, p2 when isLinear p1 || isLinear p2 -> true
+        | _ -> false    
 
-//     let pointInvariant fromPorts toPorts id =
-//         match List.tryFind (fun port -> getPortId port = id) fromPorts with
-//         | Some (S id') ->
-//             List.contains (P id') toPorts
-//             && List.contains (M id') toPorts
-//             && not (List.contains (S id') toPorts)
-//         | Some (M id') ->
-//             List.contains (P id') fromPorts
-//             && List.contains (S id') toPorts
-//             && not (List.contains (M id') toPorts)
-//         | Some (P id') ->
-//             List.contains (M id') fromPorts
-//             && List.contains (S id') toPorts
-//             && not (List.contains (P id') toPorts)
-//         | _ -> false
+    let pointInvariant fromPorts toPorts id =
+        match List.filter (portWithId id) fromPorts with
+        | [ S _ ] ->
+            match List.filter (portWithId id) toPorts with 
+            | [ P _; M _ ] 
+            | [ M _; P _ ] -> true 
+            | _ -> false  
+        | [ M _; P _ ] ->
+            match List.filter (portWithId id) toPorts with 
+            | [ S _ ] -> true 
+            | _ -> false 
+        | _ -> false
+    
+    let linearInvariant fromPorts toPorts id = 
+        match List.filter (portWithId id) fromPorts with 
+        | [ ] -> 
+            match List.filter (portWithId id) toPorts with 
+            | [ L _ ] -> true 
+            | _ -> false 
+        | [ L _ ] -> 
+            match List.filter (portWithId id) toPorts with 
+            | [ ]
+            | [ L _ ] -> true 
+            | _ -> false 
+        | _ -> false 
 
-//     let isWellFormed (N (linears, points, connsUp, connsDown, ss, ts)) =
+    // Inspiration: https://www.geeksforgeeks.org/detect-cycle-in-a-graph/
+    let rec dfsCycles conns port vs rs = 
+        if Set.contains port vs && Set.contains port rs then 
+            true 
+        elif Set.contains port vs then 
+            false 
+        else 
+            getNeighbours port conns 
+            |> recNs conns (Set.add port vs) (Set.add port rs) 
+    and recNs conns vs rs = 
+        function 
+        | [] -> false 
+        | p :: ns -> dfsCycles conns p vs rs || recNs conns vs rs ns 
 
 
-//         let fromPorts, toPorts =
-//             Map.keys connsUp |> Seq.toList, Map.values connsUp |> Seq.toList
+    let isWellFormed (N (linears, points, connsUp, connsDown, signals, trains)) =
 
-//         let trainFinalPos = Map.values ts |> Seq.toList
+        let connsUpKeys, connsUpVals = 
+            Seq.toList (Map.keys connsUp), Seq.toList (Map.values connsUp)
+        
+        let trainFinalPos = Seq.toList (Map.values trains)
+        
+        // No linear segment and point have common ID.
+        Set.intersect linears points = Set.empty
 
-//         // A port can at most appear once as an origin and once as a destination.
-//         fromPorts = List.distinct fromPorts
-//         && toPorts = List.distinct toPorts
+        && Map.forall connectionInvariant connsUp
 
-//         // Point invariant.
-//         && Set.forall (pointInvariant fromPorts toPorts) points
+        && Set.forall (pointInvariant connsUpKeys connsUpVals) points
 
-//         // Only connect a linear segment and a port.
-//         && Map.forall connectionInvariant connsUp
+        && Set.forall (linearInvariant connsUpKeys connsUpVals) linears
 
-//         // No linear segment and point have common ID.
-//         && Set.forall (fun id -> Set.contains id points |> not) linears
+        // Signal placed on an existing linear segment.
+        && Set.forall (fun s -> Set.contains s linears) signals
 
-//         // Signal placed on an existing linear segment.
-//         && Map.forall (fun id _ -> Set.exists ((=) id) linears) ss
+        // Trains' are placed (and must finish on) linear segments
+        && Map.forall (fun id1 id2 -> Set.contains id1 linears && Set.contains id2 linears) trains 
 
-//         // Trains' initial and final location placed on an existing linear segment.
-//         && Map.forall
-//             (fun init final ->
-//                 Set.contains init linears
-//                 && Set.contains final linears)
-//             ts
+        // Trains cannot have the same final position.
+        && trainFinalPos = List.distinct trainFinalPos
 
-//         // Trains cannot have the same final position.
-//         && trainFinalPos = List.distinct trainFinalPos
+        // Trains must be able to reach their destination 
+        && Map.forall 
+            (fun start dest -> 
+                let pStart, pDest = L start, L dest
 
-//         // No cycles.
-//         // TODO Implement.
-//         && true
+                dfs connsUp pStart Set.empty |> Set.contains pDest
+                || dfs connsDown pStart Set.empty |> Set.contains pDest)
+            trains
+
+        // No cycles.
+        // TODO Implement.
+        && not (Map.exists (fun start _ -> dfsCycles connsUp (L start) Set.empty Set.empty) trains)
 
 module GameFunctions =
 
@@ -251,15 +282,17 @@ module GameFunctions =
         let isTravellingUp start dest = 
             dfs connsUp start Set.empty |> Set.contains dest
 
-        let isTravellingDown start dest = not (isTravellingUp start dest)
+        // let isTravellingDown start dest = not (isTravellingUp start dest)
 
         let trainsUp, trainsDown = 
             Map.fold
                 (fun (ups, downs) start final -> 
-                    let tupleOpt = Some start, Some final 
+                    let pStart, pFinal = L start, L final
+                    
+                    let tupleOpt = Some pStart, Some pFinal
 
                     // Assumes all trains can reach their destination. 
-                    if dfs connsUp start Set.empty |> Set.contains final then 
+                    if dfs connsUp pStart Set.empty |> Set.contains pFinal then 
                         tupleOpt :: ups, downs 
                     else 
                         ups, tupleOpt :: downs)
