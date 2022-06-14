@@ -74,7 +74,7 @@ module Tests =
         output.[0] = Zero
 
     [<Fact>]
-    let ``Simple false Horn formula`` () =
+    let simpleFalseHornFormula () =
         let actual =
             F [ C [ Pos "p" ]; C [ Neg "p" ] ]
             |> hornToHyperEdgeArray "Special"
@@ -86,7 +86,7 @@ module Tests =
         Assert.False(isSatisfiable actual)
 
     [<Fact>]
-    let ``Simple true Horn formula`` () =
+    let simpleTrueHornFormula () =
         let actual =
             F [ C [ Pos "p" ]; C [ Pos "q" ] ]
             |> hornToHyperEdgeArray "Special"

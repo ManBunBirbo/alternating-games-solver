@@ -16,13 +16,13 @@ let simpleDepGraph =
     |> arrayToDepGraph
 
 [<Fact>]
-let ``Simple dep graph All explored All One From node 0`` () =
+let simpleGraphAllExporedFromInitNode () =
     let expected = Array.ofList [ One; One ]
     let actual = simpleDepGraph.liuSmolka 0
     Assert.Equal<Collections.Generic.IEnumerable<FixedValue>>(expected, actual)
 
 [<Fact>]
-let ``Simple dep graph Node 1 explored and One Node 0 Unknown From node 1`` () =
+let simpleGraphNotAllExplored () =
     let expected = Array.ofList [ Unknown; One ]
     let actual = simpleDepGraph.liuSmolka 1
     Assert.Equal<Collections.Generic.IEnumerable<FixedValue>>(expected, actual)
@@ -41,7 +41,7 @@ let lsDepGraph =
     |> arrayToDepGraph
 
 [<Fact>]
-let ``LiuSmolka Example All Explored From any init node`` () =
+let graphExplorableFromAnyInit () =
     let expected = Array.ofList [ One; Zero; Zero ]
 
     for i in [ 0..2 ] do
@@ -63,7 +63,7 @@ let modLsDepGraph =
     |> arrayToDepGraph
 
 [<Fact>]
-let ``Modified LiuSmolka example All explored All One Always`` () =
+let graphExplorableFromAnyInitAllOne () =
     let expected = Array.ofList [ One; One; One ]
 
     for i in [ 0..2 ] do
@@ -88,7 +88,7 @@ let disDepGraph =
     |> arrayToDepGraph
 
 [<Fact>]
-let ``Small disconnected example Exploring bigger area`` () =
+let disconnectedExampleBigArea () =
     let expected = Array.ofList [ One; One; One; Unknown ]
 
     for i in [ 0..2 ] do
@@ -97,7 +97,7 @@ let ``Small disconnected example Exploring bigger area`` () =
         Assert.Equal<Collections.Generic.IEnumerable<FixedValue>>(expected, actual)
 
 [<Fact>]
-let ``Small disconnected example Exploring small area`` () =
+let disconnectedExampleSmallArea () =
     let expected =
         Array.ofList [ Unknown
                        Unknown

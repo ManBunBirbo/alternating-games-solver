@@ -7,10 +7,13 @@ open RailwayExtra
 open RailwayLib.NetworkFunctions
 open TestUtils
 
-    
+let testFileWellFormed filename = 
+    loadTestFile filename 
+    |> parse 
+    |> isWellFormed
 
 [<Fact>]
-let ``Kasting example railway.`` () =
+let kasting00WellFormed () =
     let facit = 
         let ls = set [ "s10"; "s12"; "s20" ]
         let ps = set [ "s11" ]
@@ -27,10 +30,13 @@ let ``Kasting example railway.`` () =
     Assert.Equal(facit, result)
 
 [<Fact>]
-let yesSir () = 
-    let result = 
-        loadTestFile "02-cycle.txt" 
-        |> parse 
-        |> isWellFormed
-    
-    Assert.False(result)
+let cycle02NotWellFormed () =  
+    Assert.False(testFileWellFormed "02-cycle.txt")
+
+[<Fact>] 
+let linearDuplicate () =     
+    Assert.False(testFileWellFormed "03-linear-duplicate.txt")
+
+[<Fact>] 
+let linearAndPointWithSameID () =  
+    Assert.False(testFileWellFormed "04-linear-point-share-id.txt")

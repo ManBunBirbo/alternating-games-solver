@@ -33,28 +33,28 @@ let simpleGame =
     edges1, edges2, isGoalState
 
 [<Fact>]
-let ``On-the-fly solver solves simple, legal game`` () =
+let simpleGameSolved () =
     let solver =
         new OnTheFlySolver<string * string>(simpleGame, (=), (("L3", "-"), One))
 
     Assert.True(solver.solve)
 
 [<Fact>]
-let ``On-the-fly solver cannot solve simple, illegal game`` () =
+let SimpleGameNotSolvable () =
     let solver =
         new OnTheFlySolver<string * string>(simpleGame, (=), (("L1", "+"), One))
 
     Assert.False(solver.solve)
 
 [<Fact>]
-let comeOn () = 
+let Kasting00Solved () = 
     let kasting = loadTestFile "00-kasting.txt"
     let solver = parse kasting |> toSolver
 
     Assert.True(solver.solve)
 
 [<Fact>]
-let please () = 
+let KastingAlt01NotSolvable () = 
     let kastingAlt = loadTestFile "01-kasting-altered.txt"
     let solver = parse kastingAlt |> toSolver 
 
