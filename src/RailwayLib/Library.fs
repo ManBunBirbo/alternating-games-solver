@@ -5,7 +5,7 @@
 namespace RailwayLib
 
 type Port =
-    | L of string // Linear point. 
+    | L of string // Linear port.
     | S of string // Stem of point.
     | P of string // Plus (default) branch of point.
     | M of string // Minus branch of point.
@@ -51,25 +51,27 @@ module AuxilaryRailwayFunctions =
         
         Set.fold getCombinationsFolder [ Set.empty ] set 
 
-    /// Depth-first-search through a network from a port in the direction determined by conn(ection)s map. 
-    let rec dfs conns port visited = 
-        if Set.contains port visited then 
-            visited 
-        else 
-            getNeighbours port conns 
-            |> recNeighbors conns (Set.add port visited)     
-    and getNeighbours port conns = 
+    /// From a given port get the neighbors in conn(ection)s graph. 
+    let getNeighbours port conns = 
         match Map.tryFind port conns with
         | None -> [ ]
         | Some (L _ as p) -> [ p ]
         | Some (M id) 
         | Some (P id) -> [ (S id) ]
         | Some (S id) -> [ (P id); (M id) ]
+
+    /// Depth-first-search through a network from a port in the direction determined by conn(ection)s map.
+    // TODO Refactor to dfsFind 
+    let rec dfs conns port visited = 
+        if Set.contains port visited then 
+            visited 
+        else 
+            getNeighbours port conns 
+            |> recNeighbors conns (Set.add port visited)     
     and recNeighbors conns visited = 
         function  
         | [] -> visited
         | p :: ns -> recNeighbors conns (dfs conns p visited) ns
-    
 
     let copyArrayReplaceValue array index value =
         let arrayCopy = Array.copy array
@@ -136,7 +138,8 @@ module NetworkFunctions =
             | [ P _; M _ ] 
             | [ M _; P _ ] -> true 
             | _ -> false  
-        | [ M _; P _ ] ->
+        | [ M _; P _ ]
+        | [ P _; M _ ] ->
             match List.filter (portWithId id) toPorts with 
             | [ S _ ] -> true 
             | _ -> false 
@@ -156,18 +159,16 @@ module NetworkFunctions =
         | _ -> false 
 
     // Inspiration: https://www.geeksforgeeks.org/detect-cycle-in-a-graph/
-    let rec dfsCycles conns port vs rs = 
-        if Set.contains port vs && Set.contains port rs then 
+    let rec dfsCycles conns port vs = 
+        if Set.contains port vs then 
             true 
-        elif Set.contains port vs then 
-            false 
         else 
             getNeighbours port conns 
-            |> recNs conns (Set.add port vs) (Set.add port rs) 
-    and recNs conns vs rs = 
+            |> recNs conns (Set.add port vs)
+    and recNs conns vs = 
         function 
         | [] -> false 
-        | p :: ns -> dfsCycles conns p vs rs || recNs conns vs rs ns 
+        | p :: ns -> dfsCycles conns p vs || recNs conns vs ns 
 
 
     let isWellFormed (N (linears, points, connsUp, connsDown, signals, trains)) =
@@ -195,18 +196,18 @@ module NetworkFunctions =
         // Trains cannot have the same final position.
         && trainFinalPos = List.distinct trainFinalPos
 
+        // TODO Move out of here. 
         // Trains must be able to reach their destination 
-        && Map.forall 
-            (fun start dest -> 
-                let pStart, pDest = L start, L dest
+        // && Map.forall 
+        //     (fun start dest -> 
+        //         let pStart, pDest = L start, L dest
 
-                dfs connsUp pStart Set.empty |> Set.contains pDest
-                || dfs connsDown pStart Set.empty |> Set.contains pDest)
-            trains
+        //         dfs connsUp pStart Set.empty |> Set.contains pDest
+        //         || dfs connsDown pStart Set.empty |> Set.contains pDest)
+        //     trains
 
         // No cycles.
-        // TODO Implement.
-        && not (Map.exists (fun start _ -> dfsCycles connsUp (L start) Set.empty Set.empty) trains)
+        && not (Map.exists (fun start _ -> dfsCycles connsUp (L start) Set.empty) trains)
 
 module GameFunctions =
 
@@ -260,7 +261,8 @@ module GameFunctions =
                     | Some (S id) -> move (Some (P id)) conns
                     | _ -> None
 
-            if hasCrashed tsUp tsDown then Set.empty 
+            if hasCrashed tsUp tsDown then 
+                Set.empty 
             else 
                 let mutable nextStates = Set.empty
 
@@ -278,11 +280,8 @@ module GameFunctions =
 
                 nextStates
                 
-
         let isTravellingUp start dest = 
             dfs connsUp start Set.empty |> Set.contains dest
-
-        // let isTravellingDown start dest = not (isTravellingUp start dest)
 
         let trainsUp, trainsDown = 
             Map.fold
@@ -307,14 +306,12 @@ module GameFunctions =
 
         let initState = 
             TGS (Array.ofList upStart, Array.ofList downStart, Set.empty, Set.empty)
-
+        
         let initConfig = initState, One 
-        new OnTheFlySolver<TrainGameState>
-            (
-                (edgesOne, edgesTwo, isGoalState), 
-                simRel, 
-                initConfig
-            )
+
+        let game = edgesOne, edgesTwo, isGoalState
+        
+        new OnTheFlySolver<TrainGameState>(game, simRel, initConfig)
 
 
 

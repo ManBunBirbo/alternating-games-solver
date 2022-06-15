@@ -1,123 +1,129 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="0d427a51-9723-4783-9529-d91e6d88579f" name="@thinkpad-t460s 2022-06-14 16:13:13" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2022-06-14T16:13:13.5149772+02:00" queuing="2022-06-14T16:13:13.5149774+02:00" start="2022-06-14T16:13:10.9187463+02:00" finish="2022-06-14T16:13:13.6230105+02:00" />
-  <TestSettings name="default" id="272b4fe0-2ddb-427d-8bb5-98b504686d90">
-    <Deployment runDeploymentRoot="_thinkpad-t460s_2022-06-14_16_13_13" />
+<TestRun id="9e41521a-73a3-4a66-bde0-3392b17ef416" name="@thinkpad-t460s 2022-06-15 10:11:01" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-06-15T10:11:01.5486825+02:00" queuing="2022-06-15T10:11:01.5486826+02:00" start="2022-06-15T10:10:59.4613815+02:00" finish="2022-06-15T10:11:01.7360103+02:00" />
+  <TestSettings name="default" id="31e494eb-83f9-4c4e-a0f4-5f58c4580d82">
+    <Deployment runDeploymentRoot="_thinkpad-t460s_2022-06-15_10_11_01" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="1ced7113-cf1f-4916-93af-b0e1329cf148" testId="77729143-e69c-3d12-19b1-96f26f35ee43" testName="Tests.kasting00WellFormed" computerName="thinkpad-t460s" duration="00:00:00.1343900" startTime="2022-06-14T16:13:13.4391532+02:00" endTime="2022-06-14T16:13:13.4391533+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1ced7113-cf1f-4916-93af-b0e1329cf148" />
-    <UnitTestResult executionId="1bdb48ed-13ef-4cff-be3d-2831d0dda1c5" testId="0a647154-d9b4-2c2f-ceb1-b87ec250c0bd" testName="LiuSmolkaTests.disconnectedExampleSmallArea" computerName="thinkpad-t460s" duration="00:00:00.0003049" startTime="2022-06-14T16:13:13.4381612+02:00" endTime="2022-06-14T16:13:13.4381614+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1bdb48ed-13ef-4cff-be3d-2831d0dda1c5" />
-    <UnitTestResult executionId="75c47e4a-8d06-4ba1-8330-c2284385a913" testId="45b53d60-0591-8abc-a10d-be324b906e25" testName="Tests.cycle02NotWellFormed" computerName="thinkpad-t460s" duration="00:00:00.0002977" startTime="2022-06-14T16:13:13.4394232+02:00" endTime="2022-06-14T16:13:13.4394233+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="75c47e4a-8d06-4ba1-8330-c2284385a913" />
-    <UnitTestResult executionId="455aab89-451c-4e6a-91bd-2f7e26d6a0c4" testId="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be" testName="OnTheFlySolverTests.simpleGameSolved" computerName="thinkpad-t460s" duration="00:00:00.0794734" startTime="2022-06-14T16:13:13.4389703+02:00" endTime="2022-06-14T16:13:13.4389704+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="455aab89-451c-4e6a-91bd-2f7e26d6a0c4" />
-    <UnitTestResult executionId="e1d72320-c55f-41fc-bf41-078e06b12617" testId="68395dd5-7ddc-36b8-7519-afdc41357904" testName="LiuSmolkaTests.graphExplorableFromAnyInitAllOne" computerName="thinkpad-t460s" duration="00:00:00.0447602" startTime="2022-06-14T16:13:13.3650499+02:00" endTime="2022-06-14T16:13:13.3650500+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e1d72320-c55f-41fc-bf41-078e06b12617" />
-    <UnitTestResult executionId="6a79c4ec-124e-4071-bfae-3ca515d734e1" testId="7503bc02-09aa-4593-b18d-acb1e0bf101f" testName="LiuSmolkaTests.simpleGraphAllExporedFromInitNode" computerName="thinkpad-t460s" duration="00:00:00.0005055" startTime="2022-06-14T16:13:13.3676560+02:00" endTime="2022-06-14T16:13:13.3676569+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6a79c4ec-124e-4071-bfae-3ca515d734e1" />
-    <UnitTestResult executionId="bfb6fb0e-62e0-47b3-a5fe-cb4e7078ac29" testId="812bf656-8243-1c93-0387-55fc7b3e413c" testName="LiuSmolkaTests.graphExplorableFromAnyInit" computerName="thinkpad-t460s" duration="00:00:00.0005262" startTime="2022-06-14T16:13:13.3674113+02:00" endTime="2022-06-14T16:13:13.3674114+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bfb6fb0e-62e0-47b3-a5fe-cb4e7078ac29" />
-    <UnitTestResult executionId="2de02d84-f312-41f5-b1e7-e6c233f11be8" testId="09c5c7a4-b39c-c586-68c7-3f3b231a08c2" testName="OnTheFlySolverTests.Kasting00Solved" computerName="thinkpad-t460s" duration="00:00:00.0955645" startTime="2022-06-14T16:13:13.4736745+02:00" endTime="2022-06-14T16:13:13.4736746+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2de02d84-f312-41f5-b1e7-e6c233f11be8" />
-    <UnitTestResult executionId="86ab481f-0b16-44ef-b2b6-a56a460ac496" testId="cc4bd31d-9be1-bfed-aaa6-be430fc829d2" testName="Horn.Tests.simpleFalseHornFormula" computerName="thinkpad-t460s" duration="00:00:00.0448854" startTime="2022-06-14T16:13:13.3549461+02:00" endTime="2022-06-14T16:13:13.3550311+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="86ab481f-0b16-44ef-b2b6-a56a460ac496" />
-    <UnitTestResult executionId="099f93c1-1751-464f-a7f4-66f4e8344fd9" testId="d9149618-290a-572c-cc2e-067be9f657c5" testName="Tests.linearAndPointWithSameID" computerName="thinkpad-t460s" duration="00:00:00.0002920" startTime="2022-06-14T16:13:13.4393452+02:00" endTime="2022-06-14T16:13:13.4393452+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="099f93c1-1751-464f-a7f4-66f4e8344fd9" />
-    <UnitTestResult executionId="63fbed55-e603-4d65-98e0-cf4bef214086" testId="250b3ceb-6fe5-056c-8bc2-e1d00ec26404" testName="LiuSmolkaTests.disconnectedExampleBigArea" computerName="thinkpad-t460s" duration="00:00:00.0007135" startTime="2022-06-14T16:13:13.3675139+02:00" endTime="2022-06-14T16:13:13.3675139+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="63fbed55-e603-4d65-98e0-cf4bef214086" />
-    <UnitTestResult executionId="c974723d-32da-4c83-8bd1-e30abe81b1f5" testId="0f8873e5-d445-644a-11d9-8e557db3eb36" testName="Tests.linearDuplicate" computerName="thinkpad-t460s" duration="00:00:00.0004739" startTime="2022-06-14T16:13:13.4392324+02:00" endTime="2022-06-14T16:13:13.4392325+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c974723d-32da-4c83-8bd1-e30abe81b1f5" />
-    <UnitTestResult executionId="2698db68-79f5-4367-b74f-30acbca85142" testId="2390493a-830c-5420-4025-2a8e524ddd6e" testName="LiuSmolkaTests.simpleGraphNotAllExplored" computerName="thinkpad-t460s" duration="00:00:00.0003440" startTime="2022-06-14T16:13:13.3673187+02:00" endTime="2022-06-14T16:13:13.3673187+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2698db68-79f5-4367-b74f-30acbca85142" />
-    <UnitTestResult executionId="0a5b72ae-98b2-4e35-9a87-6fbf4b0906b4" testId="60613b19-b9f4-9fe5-0494-9e44c9553437" testName="OnTheFlySolverTests.SimpleGameNotSolvable" computerName="thinkpad-t460s" duration="00:00:00.0008930" startTime="2022-06-14T16:13:13.4390703+02:00" endTime="2022-06-14T16:13:13.4390704+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a5b72ae-98b2-4e35-9a87-6fbf4b0906b4" />
-    <UnitTestResult executionId="964c3dbb-0a75-4b03-8795-41a2fccea777" testId="46bf2de4-561d-6c4b-4335-ef74870385c7" testName="OnTheFlySolverTests.KastingAlt01NotSolvable" computerName="thinkpad-t460s" duration="00:00:00.0313105" startTime="2022-06-14T16:13:13.5046979+02:00" endTime="2022-06-14T16:13:13.5046980+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="964c3dbb-0a75-4b03-8795-41a2fccea777" />
-    <UnitTestResult executionId="7f8c7190-db9c-44df-8aba-f91c5841b826" testId="55ca0554-c986-e11d-7736-f44ec48845aa" testName="Horn.Tests.simpleTrueHornFormula" computerName="thinkpad-t460s" duration="00:00:00.0054599" startTime="2022-06-14T16:13:13.3676014+02:00" endTime="2022-06-14T16:13:13.3676015+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7f8c7190-db9c-44df-8aba-f91c5841b826" />
+    <UnitTestResult executionId="c9419cdd-ea33-4bdf-9274-a81b984818bb" testId="77729143-e69c-3d12-19b1-96f26f35ee43" testName="Tests.kasting00WellFormed" computerName="thinkpad-t460s" duration="00:00:00.1440823" startTime="2022-06-15T10:11:01.4934596+02:00" endTime="2022-06-15T10:11:01.4934596+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c9419cdd-ea33-4bdf-9274-a81b984818bb" />
+    <UnitTestResult executionId="34140f74-03ee-418b-947a-6a22dc50fd11" testId="45006b6b-6f3b-293d-6f8e-7a2b05f89abf" testName="Tests.branchWellFormed" computerName="thinkpad-t460s" duration="00:00:00.1386927" startTime="2022-06-15T10:11:01.6322686+02:00" endTime="2022-06-15T10:11:01.6322686+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34140f74-03ee-418b-947a-6a22dc50fd11" />
+    <UnitTestResult executionId="5e3e7fb5-4698-4c52-9c4d-d77b56a1cdc0" testId="0a647154-d9b4-2c2f-ceb1-b87ec250c0bd" testName="LiuSmolkaTests.disconnectedExampleSmallArea" computerName="thinkpad-t460s" duration="00:00:00.0002585" startTime="2022-06-15T10:11:01.4858975+02:00" endTime="2022-06-15T10:11:01.4858976+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5e3e7fb5-4698-4c52-9c4d-d77b56a1cdc0" />
+    <UnitTestResult executionId="3c1f9b28-edfc-414c-aefa-91680a1dafb1" testId="812bf656-8243-1c93-0387-55fc7b3e413c" testName="LiuSmolkaTests.graphExplorableFromAnyInit" computerName="thinkpad-t460s" duration="00:00:00.0005184" startTime="2022-06-15T10:11:01.4136975+02:00" endTime="2022-06-15T10:11:01.4136976+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3c1f9b28-edfc-414c-aefa-91680a1dafb1" />
+    <UnitTestResult executionId="78e70ef8-a86d-4585-a7e8-668a20268c8c" testId="0f8873e5-d445-644a-11d9-8e557db3eb36" testName="Tests.linearDuplicate" computerName="thinkpad-t460s" duration="00:00:00.0002240" startTime="2022-06-15T10:11:01.6325495+02:00" endTime="2022-06-15T10:11:01.6325496+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="78e70ef8-a86d-4585-a7e8-668a20268c8c" />
+    <UnitTestResult executionId="3ea63929-a40d-4c13-b464-0022bb6ccb2f" testId="55ca0554-c986-e11d-7736-f44ec48845aa" testName="Horn.Tests.simpleTrueHornFormula" computerName="thinkpad-t460s" duration="00:00:00.0030169" startTime="2022-06-15T10:11:01.4864982+02:00" endTime="2022-06-15T10:11:01.4864983+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ea63929-a40d-4c13-b464-0022bb6ccb2f" />
+    <UnitTestResult executionId="35a313d6-328c-41ef-af76-99ce8ad13291" testId="46bf2de4-561d-6c4b-4335-ef74870385c7" testName="OnTheFlySolverTests.KastingAlt01NotSolvable" computerName="thinkpad-t460s" duration="00:00:00.0357904" startTime="2022-06-15T10:11:01.5701311+02:00" endTime="2022-06-15T10:11:01.5701313+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35a313d6-328c-41ef-af76-99ce8ad13291" />
+    <UnitTestResult executionId="061e47ff-6b35-48ae-bdc8-681f0573bcfd" testId="45b53d60-0591-8abc-a10d-be324b906e25" testName="Tests.cycle02NotWellFormed" computerName="thinkpad-t460s" duration="00:00:00.0002316" startTime="2022-06-15T10:11:01.6356723+02:00" endTime="2022-06-15T10:11:01.6356723+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="061e47ff-6b35-48ae-bdc8-681f0573bcfd" />
+    <UnitTestResult executionId="84de5773-c8ea-4228-913d-5ea8b12d044b" testId="2390493a-830c-5420-4025-2a8e524ddd6e" testName="LiuSmolkaTests.simpleGraphNotAllExplored" computerName="thinkpad-t460s" duration="00:00:00.0003836" startTime="2022-06-15T10:11:01.4135706+02:00" endTime="2022-06-15T10:11:01.4135707+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="84de5773-c8ea-4228-913d-5ea8b12d044b" />
+    <UnitTestResult executionId="7d028d96-68c2-480c-a2a7-768e808a6af8" testId="250b3ceb-6fe5-056c-8bc2-e1d00ec26404" testName="LiuSmolkaTests.disconnectedExampleBigArea" computerName="thinkpad-t460s" duration="00:00:00.0004854" startTime="2022-06-15T10:11:01.4137764+02:00" endTime="2022-06-15T10:11:01.4137765+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d028d96-68c2-480c-a2a7-768e808a6af8" />
+    <UnitTestResult executionId="742e1e1f-9b9a-4c57-9d9d-1080362174a4" testId="7503bc02-09aa-4593-b18d-acb1e0bf101f" testName="LiuSmolkaTests.simpleGraphAllExporedFromInitNode" computerName="thinkpad-t460s" duration="00:00:00.0002507" startTime="2022-06-15T10:11:01.4138827+02:00" endTime="2022-06-15T10:11:01.4138828+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="742e1e1f-9b9a-4c57-9d9d-1080362174a4" />
+    <UnitTestResult executionId="1932f3c9-4962-4fdb-ad42-425e100662aa" testId="68395dd5-7ddc-36b8-7519-afdc41357904" testName="LiuSmolkaTests.graphExplorableFromAnyInitAllOne" computerName="thinkpad-t460s" duration="00:00:00.0389904" startTime="2022-06-15T10:11:01.4114148+02:00" endTime="2022-06-15T10:11:01.4114149+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1932f3c9-4962-4fdb-ad42-425e100662aa" />
+    <UnitTestResult executionId="83b2f23b-68da-403a-a837-5407a3167336" testId="cc4bd31d-9be1-bfed-aaa6-be430fc829d2" testName="Horn.Tests.simpleFalseHornFormula" computerName="thinkpad-t460s" duration="00:00:00.0393670" startTime="2022-06-15T10:11:01.3978004+02:00" endTime="2022-06-15T10:11:01.3978768+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="83b2f23b-68da-403a-a837-5407a3167336" />
+    <UnitTestResult executionId="682d7164-aac1-4a4c-b955-24def99a3bae" testId="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be" testName="OnTheFlySolverTests.simpleGameSolved" computerName="thinkpad-t460s" duration="00:00:00.0790646" startTime="2022-06-15T10:11:01.4867279+02:00" endTime="2022-06-15T10:11:01.4867280+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="682d7164-aac1-4a4c-b955-24def99a3bae" />
+    <UnitTestResult executionId="59035879-8e78-4e9b-97bb-e842ee631855" testId="d9149618-290a-572c-cc2e-067be9f657c5" testName="Tests.linearAndPointWithSameID" computerName="thinkpad-t460s" duration="00:00:00.0002893" startTime="2022-06-15T10:11:01.6355634+02:00" endTime="2022-06-15T10:11:01.6355635+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59035879-8e78-4e9b-97bb-e842ee631855" />
+    <UnitTestResult executionId="1a1a1b20-83f1-41ed-8334-4b3ecfb952e5" testId="60613b19-b9f4-9fe5-0494-9e44c9553437" testName="OnTheFlySolverTests.SimpleGameNotSolvable" computerName="thinkpad-t460s" duration="00:00:00.0005659" startTime="2022-06-15T10:11:01.4868383+02:00" endTime="2022-06-15T10:11:01.4868384+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1a1a1b20-83f1-41ed-8334-4b3ecfb952e5" />
+    <UnitTestResult executionId="5b1b915d-007f-4973-b8be-afa5597d5cbb" testId="09c5c7a4-b39c-c586-68c7-3f3b231a08c2" testName="OnTheFlySolverTests.Kasting00Solved" computerName="thinkpad-t460s" duration="00:00:00.1046100" startTime="2022-06-15T10:11:01.5459336+02:00" endTime="2022-06-15T10:11:01.5459337+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5b1b915d-007f-4973-b8be-afa5597d5cbb" />
   </Results>
   <TestDefinitions>
     <UnitTest name="OnTheFlySolverTests.KastingAlt01NotSolvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="46bf2de4-561d-6c4b-4335-ef74870385c7">
-      <Execution id="964c3dbb-0a75-4b03-8795-41a2fccea777" />
+      <Execution id="35a313d6-328c-41ef-af76-99ce8ad13291" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="KastingAlt01NotSolvable" />
     </UnitTest>
     <UnitTest name="OnTheFlySolverTests.Kasting00Solved" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="09c5c7a4-b39c-c586-68c7-3f3b231a08c2">
-      <Execution id="2de02d84-f312-41f5-b1e7-e6c233f11be8" />
+      <Execution id="5b1b915d-007f-4973-b8be-afa5597d5cbb" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="Kasting00Solved" />
     </UnitTest>
     <UnitTest name="OnTheFlySolverTests.simpleGameSolved" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be">
-      <Execution id="455aab89-451c-4e6a-91bd-2f7e26d6a0c4" />
+      <Execution id="682d7164-aac1-4a4c-b955-24def99a3bae" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="simpleGameSolved" />
     </UnitTest>
     <UnitTest name="Tests.kasting00WellFormed" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="77729143-e69c-3d12-19b1-96f26f35ee43">
-      <Execution id="1ced7113-cf1f-4916-93af-b0e1329cf148" />
+      <Execution id="c9419cdd-ea33-4bdf-9274-a81b984818bb" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="kasting00WellFormed" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.simpleGraphAllExporedFromInitNode" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="7503bc02-09aa-4593-b18d-acb1e0bf101f">
-      <Execution id="6a79c4ec-124e-4071-bfae-3ca515d734e1" />
+      <Execution id="742e1e1f-9b9a-4c57-9d9d-1080362174a4" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="simpleGraphAllExporedFromInitNode" />
     </UnitTest>
     <UnitTest name="Tests.linearDuplicate" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="0f8873e5-d445-644a-11d9-8e557db3eb36">
-      <Execution id="c974723d-32da-4c83-8bd1-e30abe81b1f5" />
+      <Execution id="78e70ef8-a86d-4585-a7e8-668a20268c8c" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="linearDuplicate" />
     </UnitTest>
     <UnitTest name="Horn.Tests.simpleTrueHornFormula" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="55ca0554-c986-e11d-7736-f44ec48845aa">
-      <Execution id="7f8c7190-db9c-44df-8aba-f91c5841b826" />
+      <Execution id="3ea63929-a40d-4c13-b464-0022bb6ccb2f" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Horn.Tests" name="simpleTrueHornFormula" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.disconnectedExampleBigArea" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="250b3ceb-6fe5-056c-8bc2-e1d00ec26404">
-      <Execution id="63fbed55-e603-4d65-98e0-cf4bef214086" />
+      <Execution id="7d028d96-68c2-480c-a2a7-768e808a6af8" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="disconnectedExampleBigArea" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.simpleGraphNotAllExplored" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="2390493a-830c-5420-4025-2a8e524ddd6e">
-      <Execution id="2698db68-79f5-4367-b74f-30acbca85142" />
+      <Execution id="84de5773-c8ea-4228-913d-5ea8b12d044b" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="simpleGraphNotAllExplored" />
     </UnitTest>
     <UnitTest name="Horn.Tests.simpleFalseHornFormula" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="cc4bd31d-9be1-bfed-aaa6-be430fc829d2">
-      <Execution id="86ab481f-0b16-44ef-b2b6-a56a460ac496" />
+      <Execution id="83b2f23b-68da-403a-a837-5407a3167336" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Horn.Tests" name="simpleFalseHornFormula" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.graphExplorableFromAnyInit" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="812bf656-8243-1c93-0387-55fc7b3e413c">
-      <Execution id="bfb6fb0e-62e0-47b3-a5fe-cb4e7078ac29" />
+      <Execution id="3c1f9b28-edfc-414c-aefa-91680a1dafb1" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="graphExplorableFromAnyInit" />
     </UnitTest>
+    <UnitTest name="Tests.branchWellFormed" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="45006b6b-6f3b-293d-6f8e-7a2b05f89abf">
+      <Execution id="34140f74-03ee-418b-947a-6a22dc50fd11" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="branchWellFormed" />
+    </UnitTest>
     <UnitTest name="OnTheFlySolverTests.SimpleGameNotSolvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="60613b19-b9f4-9fe5-0494-9e44c9553437">
-      <Execution id="0a5b72ae-98b2-4e35-9a87-6fbf4b0906b4" />
+      <Execution id="1a1a1b20-83f1-41ed-8334-4b3ecfb952e5" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="SimpleGameNotSolvable" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.graphExplorableFromAnyInitAllOne" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="68395dd5-7ddc-36b8-7519-afdc41357904">
-      <Execution id="e1d72320-c55f-41fc-bf41-078e06b12617" />
+      <Execution id="1932f3c9-4962-4fdb-ad42-425e100662aa" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="graphExplorableFromAnyInitAllOne" />
     </UnitTest>
     <UnitTest name="Tests.linearAndPointWithSameID" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="d9149618-290a-572c-cc2e-067be9f657c5">
-      <Execution id="099f93c1-1751-464f-a7f4-66f4e8344fd9" />
+      <Execution id="59035879-8e78-4e9b-97bb-e842ee631855" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="linearAndPointWithSameID" />
     </UnitTest>
     <UnitTest name="Tests.cycle02NotWellFormed" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="45b53d60-0591-8abc-a10d-be324b906e25">
-      <Execution id="75c47e4a-8d06-4ba1-8330-c2284385a913" />
+      <Execution id="061e47ff-6b35-48ae-bdc8-681f0573bcfd" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="cycle02NotWellFormed" />
     </UnitTest>
     <UnitTest name="LiuSmolkaTests.disconnectedExampleSmallArea" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="0a647154-d9b4-2c2f-ceb1-b87ec250c0bd">
-      <Execution id="1bdb48ed-13ef-4cff-be3d-2831d0dda1c5" />
+      <Execution id="5e3e7fb5-4698-4c52-9c4d-d77b56a1cdc0" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="disconnectedExampleSmallArea" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="77729143-e69c-3d12-19b1-96f26f35ee43" executionId="1ced7113-cf1f-4916-93af-b0e1329cf148" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0a647154-d9b4-2c2f-ceb1-b87ec250c0bd" executionId="1bdb48ed-13ef-4cff-be3d-2831d0dda1c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="45b53d60-0591-8abc-a10d-be324b906e25" executionId="75c47e4a-8d06-4ba1-8330-c2284385a913" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be" executionId="455aab89-451c-4e6a-91bd-2f7e26d6a0c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="68395dd5-7ddc-36b8-7519-afdc41357904" executionId="e1d72320-c55f-41fc-bf41-078e06b12617" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="7503bc02-09aa-4593-b18d-acb1e0bf101f" executionId="6a79c4ec-124e-4071-bfae-3ca515d734e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="812bf656-8243-1c93-0387-55fc7b3e413c" executionId="bfb6fb0e-62e0-47b3-a5fe-cb4e7078ac29" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="09c5c7a4-b39c-c586-68c7-3f3b231a08c2" executionId="2de02d84-f312-41f5-b1e7-e6c233f11be8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cc4bd31d-9be1-bfed-aaa6-be430fc829d2" executionId="86ab481f-0b16-44ef-b2b6-a56a460ac496" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="d9149618-290a-572c-cc2e-067be9f657c5" executionId="099f93c1-1751-464f-a7f4-66f4e8344fd9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="250b3ceb-6fe5-056c-8bc2-e1d00ec26404" executionId="63fbed55-e603-4d65-98e0-cf4bef214086" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0f8873e5-d445-644a-11d9-8e557db3eb36" executionId="c974723d-32da-4c83-8bd1-e30abe81b1f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="2390493a-830c-5420-4025-2a8e524ddd6e" executionId="2698db68-79f5-4367-b74f-30acbca85142" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="60613b19-b9f4-9fe5-0494-9e44c9553437" executionId="0a5b72ae-98b2-4e35-9a87-6fbf4b0906b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="46bf2de4-561d-6c4b-4335-ef74870385c7" executionId="964c3dbb-0a75-4b03-8795-41a2fccea777" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="55ca0554-c986-e11d-7736-f44ec48845aa" executionId="7f8c7190-db9c-44df-8aba-f91c5841b826" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="77729143-e69c-3d12-19b1-96f26f35ee43" executionId="c9419cdd-ea33-4bdf-9274-a81b984818bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45006b6b-6f3b-293d-6f8e-7a2b05f89abf" executionId="34140f74-03ee-418b-947a-6a22dc50fd11" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0a647154-d9b4-2c2f-ceb1-b87ec250c0bd" executionId="5e3e7fb5-4698-4c52-9c4d-d77b56a1cdc0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="812bf656-8243-1c93-0387-55fc7b3e413c" executionId="3c1f9b28-edfc-414c-aefa-91680a1dafb1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f8873e5-d445-644a-11d9-8e557db3eb36" executionId="78e70ef8-a86d-4585-a7e8-668a20268c8c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="55ca0554-c986-e11d-7736-f44ec48845aa" executionId="3ea63929-a40d-4c13-b464-0022bb6ccb2f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="46bf2de4-561d-6c4b-4335-ef74870385c7" executionId="35a313d6-328c-41ef-af76-99ce8ad13291" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45b53d60-0591-8abc-a10d-be324b906e25" executionId="061e47ff-6b35-48ae-bdc8-681f0573bcfd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2390493a-830c-5420-4025-2a8e524ddd6e" executionId="84de5773-c8ea-4228-913d-5ea8b12d044b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="250b3ceb-6fe5-056c-8bc2-e1d00ec26404" executionId="7d028d96-68c2-480c-a2a7-768e808a6af8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7503bc02-09aa-4593-b18d-acb1e0bf101f" executionId="742e1e1f-9b9a-4c57-9d9d-1080362174a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="68395dd5-7ddc-36b8-7519-afdc41357904" executionId="1932f3c9-4962-4fdb-ad42-425e100662aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc4bd31d-9be1-bfed-aaa6-be430fc829d2" executionId="83b2f23b-68da-403a-a837-5407a3167336" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be" executionId="682d7164-aac1-4a4c-b955-24def99a3bae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9149618-290a-572c-cc2e-067be9f657c5" executionId="59035879-8e78-4e9b-97bb-e842ee631855" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60613b19-b9f4-9fe5-0494-9e44c9553437" executionId="1a1a1b20-83f1-41ed-8334-4b3ecfb952e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09c5c7a4-b39c-c586-68c7-3f3b231a08c2" executionId="5b1b915d-007f-4973-b8be-afa5597d5cbb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
   <ResultSummary outcome="Completed">
-    <Counters total="16" executed="16" passed="16" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Counters total="17" executed="17" passed="17" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
-      <StdOut>[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 6.0.5)
-[xUnit.net 00:00:00.73]   Discovering: TestSuite
-[xUnit.net 00:00:00.80]   Discovered:  TestSuite
-[xUnit.net 00:00:00.81]   Starting:    TestSuite
-[xUnit.net 00:00:01.13]   Finished:    TestSuite
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 6.0.5)
+[xUnit.net 00:00:00.77]   Discovering: TestSuite
+[xUnit.net 00:00:00.85]   Discovered:  TestSuite
+[xUnit.net 00:00:00.85]   Starting:    TestSuite
+[xUnit.net 00:00:01.25]   Finished:    TestSuite
 </StdOut>
     </Output>
   </ResultSummary>

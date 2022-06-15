@@ -3,4 +3,4 @@ connections =
     s20 -> s11.minus, 
     s11.stem -> s10
 signals = s20, s10
-trains = s10 -> s12, s12 -> s10
+trains = s10 -> s20

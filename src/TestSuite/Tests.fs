@@ -40,3 +40,8 @@ let linearDuplicate () =
 [<Fact>] 
 let linearAndPointWithSameID () =  
     Assert.False(testFileWellFormed "04-linear-point-share-id.txt")
+
+[<Fact>]
+let branchWellFormed () = 
+    loadTestFile "05-branch.txt" |> parse |> printfn "%A"
+    Assert.True(testFileWellFormed "05-branch.txt")

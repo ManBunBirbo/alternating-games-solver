@@ -1,0 +1,9 @@
+connections = 
+    L1 -> P1.stem, 
+    P1.plus -> L2, 
+    P1.minus -> L3, 
+    L2 -> P2.plus, 
+    L3 -> P2.minus, 
+    P2.stem -> L4    
+signals = L2
+trains = L1 -> L4
