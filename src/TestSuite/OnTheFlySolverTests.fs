@@ -5,6 +5,7 @@ open Xunit
 open TestUtils
 open RailwayExtra
 open RailwayLib.GameFunctions
+open RailwayLib.NetworkFunctions
 
 
 // |----| |-
@@ -46,17 +47,28 @@ let SimpleGameNotSolvable () =
 
     Assert.False(solver.solve)
 
+let isTestFileSolvable testFileName = 
+    let network = 
+        loadTestFile testFileName 
+        |> parse 
+
+    Assert.True(isWellFormed network)
+
+    toSolver network
+    |> fun solver -> solver.solve
+
 [<Fact>]
 let Kasting00Solved () = 
-    let kasting = loadTestFile "00-kasting.txt"
-    let solver = parse kasting |> toSolver
-
-    Assert.True(solver.solve)
+    Assert.True(isTestFileSolvable "00-kasting.txt")
 
 [<Fact>]
 let KastingAlt01NotSolvable () = 
-    let kastingAlt = loadTestFile "01-kasting-altered.txt"
-    let solver = parse kastingAlt |> toSolver 
+    Assert.False(isTestFileSolvable "01-kasting-altered.txt")
 
-    Assert.False(solver.solve)
+[<Fact>]
+let Branch05Solvable () = 
+    Assert.True(isTestFileSolvable "05-branch.txt")
 
+[<Fact>]
+let KastingNoSignals06Unsolvable () = 
+    Assert.False(isTestFileSolvable "06-kasting-no-signals.txt")
