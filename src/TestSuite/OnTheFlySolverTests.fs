@@ -1,11 +1,13 @@
 module OnTheFlySolverTests
 
-open OnTheFlySolver
+open RailwayLib
+open OnTheFlySolver.Player
+open OnTheFlySolver.Solver
 open Xunit
 open TestUtils
-open RailwayExtra
 open RailwayLib.GameFunctions
-open RailwayLib.NetworkFunctions
+open Utils
+open RailwayLib.GenerateNetwork
 
 
 // |----| |-
@@ -51,11 +53,12 @@ let isTestFileSolvable testFileName =
     let network = 
         loadTestFile testFileName 
         |> parse 
+        |||> toNetwork 
 
-    Assert.True(isWellFormed network)
+    // Assert.True(isWellFormed network)
 
     toSolver network
-    |> fun solver -> solver.solve
+    |> fun (solver: OnTheFlySolver<TrainGameState>) -> solver.solve
 
 [<Fact>]
 let Kasting00Solved () = 
@@ -72,3 +75,7 @@ let Branch05Solvable () =
 [<Fact>]
 let KastingNoSignals06Unsolvable () = 
     Assert.False(isTestFileSolvable "06-kasting-no-signals.txt")
+
+[<Fact>]
+let Lyngby07Solvable () = 
+    Assert.True(isTestFileSolvable "07-lyngby.txt")

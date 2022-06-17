@@ -27,5 +27,6 @@
   <ItemGroup>
     <ProjectReference Include="..\RailwayLib\RailwayLib.fsproj" />
     <ProjectReference Include="..\SolverLib\SolverLib.fsproj" />
+    <ProjectReference Include="..\FSharpApp\FSharpApp.fsproj" />
   </ItemGroup>
 </Project>

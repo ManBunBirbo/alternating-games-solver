@@ -5,7 +5,10 @@
     <FsYaccToolExe>fsyacc.dll</FsYaccToolExe>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Library.fs" />
+    <Compile Include="RailwayTypes.fs" />
+    <Compile Include="AuxRailwayFuncs.fs" />
+    <Compile Include="GenerateNetwork.fs" />
+    <Compile Include="NetworkToSolver.fs" />
     <FsYacc Include="Parser.fsy">
       <OtherFlags>--module Parser --open "RailwayLib"</OtherFlags>
     </FsYacc>
@@ -15,7 +18,6 @@
     <Compile Include="Parser.fsi" />
     <Compile Include="Parser.fs" />
     <Compile Include="Lexer.fs" />
-    <Compile Include="Extra.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FsLexYacc" Version="10.2.0" />

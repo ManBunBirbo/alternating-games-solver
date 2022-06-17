@@ -1,19 +1,18 @@
 module Tests
 
-open System
 open Xunit
 open RailwayLib
-open RailwayExtra
-open RailwayLib.NetworkFunctions
+open RailwayLib.GenerateNetwork
 open TestUtils
+open Utils
 
-let testFileWellFormed filename = 
+let testFileToNetwork filename = 
     loadTestFile filename 
     |> parse 
-    |> isWellFormed
+    |||> toNetwork
 
 [<Fact>]
-let kasting00WellFormed () =
+let kasting00 () =
     let facit = 
         let ls = set [ "s10"; "s12"; "s20" ]
         let ps = set [ "s11" ]
@@ -24,23 +23,37 @@ let kasting00WellFormed () =
 
         N (ls, ps, csUp, csDown, ss, ts)
 
-    let result = loadTestFile "00-kasting.txt" |> parse 
-
-    Assert.True(result |> isWellFormed)
+    let result = testFileToNetwork "00-kasting.txt"
     Assert.Equal(facit, result)
 
 [<Fact>]
-let cycle02NotWellFormed () =  
-    Assert.False(testFileWellFormed "02-cycle.txt")
+let cycleError () = 
+    Assert.Throws<NetworkError>(fun () -> testFileToNetwork "02-cycle.txt" |> ignore)
+    |> fun err -> Assert.Equal("A cycle is present in the railway network.", err.Message)
 
 [<Fact>] 
-let linearDuplicate () =     
-    Assert.False(testFileWellFormed "03-linear-duplicate.txt")
+let linearDuplicate () =  
+    Assert.Throws<NetworkError>(fun () -> testFileToNetwork "03-linear-duplicate.txt" |> ignore)
+    |> fun err -> Assert.Equal("Port \"s10\" is not deterministic.", err.Message)
 
 [<Fact>] 
 let linearAndPointWithSameID () =  
-    Assert.False(testFileWellFormed "04-linear-point-share-id.txt")
+    Assert.Throws<NetworkError>(fun () -> testFileToNetwork "04-linear-point-share-id.txt" |> ignore)
+    |> fun err -> Assert.Equal("Linear segments and points must not share IDs (s20)", err.Message)
 
 [<Fact>]
 let branchWellFormed () = 
-    Assert.True(testFileWellFormed "05-branch.txt")
+    try
+        testFileToNetwork "05-branch.txt" |> ignore 
+        Assert.True(true) 
+    with 
+        | :? NetworkError -> Assert.True(false, "Branch seen as cycle.")
+
+
+[<Fact>]
+let Lyngby () = 
+    try
+        testFileToNetwork "07-lyngby.txt" |> ignore 
+        Assert.True(true) 
+    with 
+        | :? NetworkError -> Assert.True(false)

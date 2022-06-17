@@ -4,10 +4,7 @@
         "**/.idea": true,
         "**/.ionide": true,
         "**/bin": true,
-        "**/obj": true,
-        "src/RailwayLib/Lexer.fs": true,
-        "src/RailwayLib/Parser.fs": true,
-        "src/RailwayLib/Parser.fsi": true
+        "**/obj": true
     },
     "editor.inlayHints.enabled": "offUnlessPressed"
 }

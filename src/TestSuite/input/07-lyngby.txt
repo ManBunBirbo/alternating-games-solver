@@ -1,0 +1,29 @@
+connections = 
+    s30 -> p31.stem, 
+    p31.plus -> s32, 
+    p31.minus -> s20p, 
+    s32 -> p33.plus, 
+    p33.stem -> s34, 
+    s20p -> p20.plus, 
+    p20.stem -> s21, 
+    s21 -> p22.stem, 
+    p22.minus -> s22m, 
+    s22m -> p33.minus, 
+    p22.plus -> s22p, 
+    s22p -> p13.minus, 
+    s10 -> p11.stem, 
+    p11.minus -> s20m, 
+    s20m -> p20.minus, 
+    p11.plus -> s12, 
+    s12 -> p13.plus, 
+    p13.stem -> s14
+signals = 
+    s30, 
+    s32, 
+    s34, 
+    s21, 
+    s10, 
+    s12, 
+    s14 
+trains = 
+    s14 -> s30

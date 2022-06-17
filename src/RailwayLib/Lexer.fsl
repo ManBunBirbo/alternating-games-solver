@@ -20,7 +20,7 @@ let newline (lexbuf: LexBuffer<_>) =
 let id = ['a'-'z''A'-'Z']['a'-'z''A'-'Z''0'-'9']*
 let whitespace = [' ' '\t']+
 let newline = '\r' | '\n' | "\r\n"
-let port = "up" | "down" | "stem" | "plus" | "minus"
+let port = "stem" | "plus" | "minus"
 
 rule tokenize = parse 
     | whitespace { tokenize lexbuf }

@@ -1,4 +1,4 @@
-module RailwayExtra
+module Utils
 
 open FSharp.Text.Lexing 
 
@@ -9,7 +9,8 @@ open FSharp.Text.Lexing
 let parse input =
     let lexbuf = LexBuffer<char>.FromString input
     lexbuf.EndPos <- { pos_bol = 0; pos_fname = input; pos_cnum = 0; pos_lnum = 1 }
-    try Parser.start Lexer.tokenize lexbuf
+    try 
+        Parser.start Lexer.tokenize lexbuf
     with err -> 
         let pos = lexbuf.EndPos 
         let line = pos.Line
@@ -28,4 +29,3 @@ let parse input =
                 \nWhere [, ...] means a list, ie. the pattern can repeat.\n"
             |> printfn "%s" 
         exit 1
-
