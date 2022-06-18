@@ -11,4 +11,4 @@ let testFileToNetwork filename =
     __SOURCE_DIRECTORY__ + "/input/" + filename 
     |> System.IO.File.ReadAllText 
     |> parse 
-    |||> toNetwork
+    |> toNetwork

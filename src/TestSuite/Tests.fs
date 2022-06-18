@@ -9,7 +9,7 @@ open Utils
 let testFileToNetwork filename = 
     loadTestFile filename 
     |> parse 
-    |||> toNetwork
+    |> toNetwork
 
 [<Fact>]
 let kasting00 () =
@@ -26,34 +26,44 @@ let kasting00 () =
     let result = testFileToNetwork "00-kasting.txt"
     Assert.Equal(facit, result)
 
+let assertError testFileName msg = 
+    Assert.Throws<NetworkError>(fun () -> testFileToNetwork testFileName |> ignore)
+    |> fun err -> Assert.Equal(msg, err.Message)
+
+let assertNoError testFileName = 
+    Record.Exception(fun () -> testFileToNetwork testFileName |> ignore)
+    |> fun err -> Assert.Null(err)
+
 [<Fact>]
 let cycleError () = 
-    Assert.Throws<NetworkError>(fun () -> testFileToNetwork "02-cycle.txt" |> ignore)
-    |> fun err -> Assert.Equal("A cycle is present in the railway network.", err.Message)
+    assertError "02-cycle.txt" "A cycle is present in the railway network."
 
 [<Fact>] 
 let linearDuplicate () =  
-    Assert.Throws<NetworkError>(fun () -> testFileToNetwork "03-linear-duplicate.txt" |> ignore)
-    |> fun err -> Assert.Equal("Port \"s10\" is not deterministic.", err.Message)
+    assertError "03-linear-duplicate.txt" "Port \"s10\" is not deterministic."
 
 [<Fact>] 
 let linearAndPointWithSameID () =  
-    Assert.Throws<NetworkError>(fun () -> testFileToNetwork "04-linear-point-share-id.txt" |> ignore)
-    |> fun err -> Assert.Equal("Linear segments and points must not share IDs (s20)", err.Message)
+    assertError 
+        "04-linear-point-share-id.txt" 
+        "Linear segments and points must not share IDs (s20)"
 
 [<Fact>]
-let branchWellFormed () = 
-    try
-        testFileToNetwork "05-branch.txt" |> ignore 
-        Assert.True(true) 
-    with 
-        | :? NetworkError -> Assert.True(false, "Branch seen as cycle.")
-
+let branchWellFormed () =
+    assertNoError "05-branch.txt"
 
 [<Fact>]
 let Lyngby () = 
-    try
-        testFileToNetwork "07-lyngby.txt" |> ignore 
-        Assert.True(true) 
-    with 
-        | :? NetworkError -> Assert.True(false)
+    assertNoError "07-lyngby.txt"
+
+[<Fact>]
+let invalidLinearGoesToItself () = 
+    assertError 
+        "08-linear-to-itself.txt" 
+        "A cycle is present in the railway network."
+
+[<Fact>]
+let invalid09PointsConnected () = 
+    assertError 
+        "09-connected-point.txt"
+        "Points must not be connected (s11.stem -/-> s12.stem)."

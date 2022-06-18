@@ -1,153 +1,171 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="69d83ddb-7da7-41cf-949d-bb539d38c75a" name="@thinkpad-t460s 2022-06-17 15:23:53" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2022-06-17T15:23:53.2101568+02:00" queuing="2022-06-17T15:23:53.2101569+02:00" start="2022-06-17T15:23:50.4764718+02:00" finish="2022-06-17T15:23:53.3575613+02:00" />
-  <TestSettings name="default" id="904cfa06-1c81-4218-828b-9b7c8e9fc69c">
-    <Deployment runDeploymentRoot="_thinkpad-t460s_2022-06-17_15_23_53" />
+<TestRun id="d9c2441b-aa43-4a76-8b09-8f8b8812bd78" name="@thinkpad-t460s 2022-06-18 12:11:11" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-06-18T12:11:11.0594533+02:00" queuing="2022-06-18T12:11:11.0594535+02:00" start="2022-06-18T12:11:07.7013042+02:00" finish="2022-06-18T12:11:13.0889878+02:00" />
+  <TestSettings name="default" id="0340502c-b847-4dcb-8d2b-68cbbe182b80">
+    <Deployment runDeploymentRoot="_thinkpad-t460s_2022-06-18_12_11_11" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="403fd77e-4a44-4234-a865-aed4459a4995" testId="46bf2de4-561d-6c4b-4335-ef74870385c7" testName="OnTheFlySolverTests.KastingAlt01NotSolvable" computerName="thinkpad-t460s" duration="00:00:00.0033815" startTime="2022-06-17T15:23:53.2581644+02:00" endTime="2022-06-17T15:23:53.2581644+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="403fd77e-4a44-4234-a865-aed4459a4995" />
-    <UnitTestResult executionId="d96dd935-eb42-4e9d-9396-e6d0e91c9e13" testId="097f26ca-d29c-7004-b740-5b1501b4e159" testName="Tests.kasting00" computerName="thinkpad-t460s" duration="00:00:00.1537558" startTime="2022-06-17T15:23:53.1625532+02:00" endTime="2022-06-17T15:23:53.1625534+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d96dd935-eb42-4e9d-9396-e6d0e91c9e13" />
-    <UnitTestResult executionId="23f2071b-22b5-4752-aa84-1741de3a56de" testId="812bf656-8243-1c93-0387-55fc7b3e413c" testName="LiuSmolkaTests.graphExplorableFromAnyInit" computerName="thinkpad-t460s" duration="00:00:00.0011389" startTime="2022-06-17T15:23:53.0779582+02:00" endTime="2022-06-17T15:23:53.0779582+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="23f2071b-22b5-4752-aa84-1741de3a56de" />
-    <UnitTestResult executionId="d27c662f-70dc-4d65-958a-bc31a1d61957" testId="cc4bd31d-9be1-bfed-aaa6-be430fc829d2" testName="Horn.Tests.simpleFalseHornFormula" computerName="thinkpad-t460s" duration="00:00:00.0469395" startTime="2022-06-17T15:23:53.0778528+02:00" endTime="2022-06-17T15:23:53.0778533+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d27c662f-70dc-4d65-958a-bc31a1d61957" />
-    <UnitTestResult executionId="d95bba43-912e-47b7-87e9-679ebc9bf4e9" testId="38e8eefa-e478-1bcb-f257-213ebf7db581" testName="Tests.cycleError" computerName="thinkpad-t460s" duration="00:00:00.0007299" startTime="2022-06-17T15:23:53.1974082+02:00" endTime="2022-06-17T15:23:53.1974083+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d95bba43-912e-47b7-87e9-679ebc9bf4e9" />
-    <UnitTestResult executionId="6a84d8fc-b040-45d9-b70d-f3f8929ddaa3" testId="d23ffe7e-a3a1-68a8-1a7f-53f328d37697" testName="OnTheFlySolverTests.KastingNoSignals06Unsolvable" computerName="thinkpad-t460s" duration="00:00:00.0021254" startTime="2022-06-17T15:23:53.2328348+02:00" endTime="2022-06-17T15:23:53.2328349+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6a84d8fc-b040-45d9-b70d-f3f8929ddaa3" />
-    <UnitTestResult executionId="9c11d32b-0c0d-49f2-9599-c6fcf7dd45df" testId="45006b6b-6f3b-293d-6f8e-7a2b05f89abf" testName="Tests.branchWellFormed" computerName="thinkpad-t460s" duration="00:00:00.0006204" startTime="2022-06-17T15:23:53.1632876+02:00" endTime="2022-06-17T15:23:53.1632877+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9c11d32b-0c0d-49f2-9599-c6fcf7dd45df" />
-    <UnitTestResult executionId="e32379a6-28fe-47e4-be31-e90a866a6af6" testId="68395dd5-7ddc-36b8-7519-afdc41357904" testName="LiuSmolkaTests.graphExplorableFromAnyInitAllOne" computerName="thinkpad-t460s" duration="00:00:00.0412109" startTime="2022-06-17T15:23:53.0597582+02:00" endTime="2022-06-17T15:23:53.0598266+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e32379a6-28fe-47e4-be31-e90a866a6af6" />
-    <UnitTestResult executionId="db7eed7f-fe19-4ea3-b3fe-c19c70312602" testId="0f8873e5-d445-644a-11d9-8e557db3eb36" testName="Tests.linearDuplicate" computerName="thinkpad-t460s" duration="00:00:00.0320402" startTime="2022-06-17T15:23:53.1965688+02:00" endTime="2022-06-17T15:23:53.1965689+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db7eed7f-fe19-4ea3-b3fe-c19c70312602" />
-    <UnitTestResult executionId="52f72587-52f0-43e4-af83-f8d2a5bfb00f" testId="2390493a-830c-5420-4025-2a8e524ddd6e" testName="LiuSmolkaTests.simpleGraphNotAllExplored" computerName="thinkpad-t460s" duration="00:00:00.0006360" startTime="2022-06-17T15:23:53.0776436+02:00" endTime="2022-06-17T15:23:53.0776436+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="52f72587-52f0-43e4-af83-f8d2a5bfb00f" />
-    <UnitTestResult executionId="e535e772-bb8c-42f5-bdb8-233be74ab781" testId="5897bedb-40c4-947b-a3b1-eafa63457987" testName="OnTheFlySolverTests.Branch05Solvable" computerName="thinkpad-t460s" duration="00:00:00.1459515" startTime="2022-06-17T15:23:53.2305549+02:00" endTime="2022-06-17T15:23:53.2305550+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e535e772-bb8c-42f5-bdb8-233be74ab781" />
-    <UnitTestResult executionId="440a01f9-583d-4e76-b44f-4a558ee2bac9" testId="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be" testName="OnTheFlySolverTests.simpleGameSolved" computerName="thinkpad-t460s" duration="00:00:00.0757034" startTime="2022-06-17T15:23:53.1447104+02:00" endTime="2022-06-17T15:23:53.1447105+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="440a01f9-583d-4e76-b44f-4a558ee2bac9" />
-    <UnitTestResult executionId="0ef14688-0cdd-4e40-9233-feb60b13c667" testId="7503bc02-09aa-4593-b18d-acb1e0bf101f" testName="LiuSmolkaTests.simpleGraphAllExporedFromInitNode" computerName="thinkpad-t460s" duration="00:00:00.0003766" startTime="2022-06-17T15:23:53.0781492+02:00" endTime="2022-06-17T15:23:53.0781494+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0ef14688-0cdd-4e40-9233-feb60b13c667" />
-    <UnitTestResult executionId="90b99329-9317-45cc-9d02-a22dfd4c2024" testId="60613b19-b9f4-9fe5-0494-9e44c9553437" testName="OnTheFlySolverTests.SimpleGameNotSolvable" computerName="thinkpad-t460s" duration="00:00:00.0007963" startTime="2022-06-17T15:23:53.2337354+02:00" endTime="2022-06-17T15:23:53.2337355+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90b99329-9317-45cc-9d02-a22dfd4c2024" />
-    <UnitTestResult executionId="24cb287d-b281-4aeb-ad7d-ab1c5fa5f484" testId="0a647154-d9b4-2c2f-ceb1-b87ec250c0bd" testName="LiuSmolkaTests.disconnectedExampleSmallArea" computerName="thinkpad-t460s" duration="00:00:00.0005664" startTime="2022-06-17T15:23:53.1441616+02:00" endTime="2022-06-17T15:23:53.1441617+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24cb287d-b281-4aeb-ad7d-ab1c5fa5f484" />
-    <UnitTestResult executionId="52a2caab-bc17-4031-9ed2-95c078c3e22b" testId="9bea558e-9b0a-9de4-a821-4e4837e13ddb" testName="OnTheFlySolverTests.Lyngby07Solvable" computerName="thinkpad-t460s" duration="00:00:00.0044221" startTime="2022-06-17T15:23:53.2546697+02:00" endTime="2022-06-17T15:23:53.2546698+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="52a2caab-bc17-4031-9ed2-95c078c3e22b" />
-    <UnitTestResult executionId="ee50d833-c71c-43e2-95db-26ad63dbedf2" testId="d9149618-290a-572c-cc2e-067be9f657c5" testName="Tests.linearAndPointWithSameID" computerName="thinkpad-t460s" duration="00:00:00.0036058" startTime="2022-06-17T15:23:53.2011404+02:00" endTime="2022-06-17T15:23:53.2011405+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee50d833-c71c-43e2-95db-26ad63dbedf2" />
-    <UnitTestResult executionId="c5244819-c997-4bd5-a24b-8bc825cdbf46" testId="55ca0554-c986-e11d-7736-f44ec48845aa" testName="Horn.Tests.simpleTrueHornFormula" computerName="thinkpad-t460s" duration="00:00:00.0030261" startTime="2022-06-17T15:23:53.1445643+02:00" endTime="2022-06-17T15:23:53.1445644+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5244819-c997-4bd5-a24b-8bc825cdbf46" />
-    <UnitTestResult executionId="21f8b8e0-2cdf-4da0-9623-19e0e54c899d" testId="f44b12f4-986c-eab0-30e0-a460f9d204ec" testName="Tests.Lyngby" computerName="thinkpad-t460s" duration="00:00:00.0009863" startTime="2022-06-17T15:23:53.1644016+02:00" endTime="2022-06-17T15:23:53.1644018+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21f8b8e0-2cdf-4da0-9623-19e0e54c899d" />
-    <UnitTestResult executionId="7b921923-d30f-4e20-b61b-b28bdde9bf88" testId="250b3ceb-6fe5-056c-8bc2-e1d00ec26404" testName="LiuSmolkaTests.disconnectedExampleBigArea" computerName="thinkpad-t460s" duration="00:00:00.0005846" startTime="2022-06-17T15:23:53.0780385+02:00" endTime="2022-06-17T15:23:53.0780386+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7b921923-d30f-4e20-b61b-b28bdde9bf88" />
-    <UnitTestResult executionId="0dcc304e-7ee8-4864-9cc9-f6fc10ca4d99" testId="09c5c7a4-b39c-c586-68c7-3f3b231a08c2" testName="OnTheFlySolverTests.Kasting00Solved" computerName="thinkpad-t460s" duration="00:00:00.0162658" startTime="2022-06-17T15:23:53.2501183+02:00" endTime="2022-06-17T15:23:53.2501183+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0dcc304e-7ee8-4864-9cc9-f6fc10ca4d99" />
+    <UnitTestResult executionId="b96c47c3-4297-4de6-b847-69f17c6c5158" testId="f44b12f4-986c-eab0-30e0-a460f9d204ec" testName="Tests.Lyngby" computerName="thinkpad-t460s" duration="00:00:00.0009774" startTime="2022-06-18T12:11:10.9916714+02:00" endTime="2022-06-18T12:11:10.9916714+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b96c47c3-4297-4de6-b847-69f17c6c5158" />
+    <UnitTestResult executionId="ad0053e1-6b80-464e-9c3f-02430e5b11df" testId="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be" testName="OnTheFlySolverTests.simpleGameSolved" computerName="thinkpad-t460s" duration="00:00:00.1555867" startTime="2022-06-18T12:11:10.8737901+02:00" endTime="2022-06-18T12:11:10.8737902+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad0053e1-6b80-464e-9c3f-02430e5b11df" />
+    <UnitTestResult executionId="0f59b977-c4aa-4b2d-9180-dbb253820989" testId="46bf2de4-561d-6c4b-4335-ef74870385c7" testName="OnTheFlySolverTests.KastingAlt01NotSolvable" computerName="thinkpad-t460s" duration="00:00:00.0013727" startTime="2022-06-18T12:11:12.9764621+02:00" endTime="2022-06-18T12:11:12.9764622+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f59b977-c4aa-4b2d-9180-dbb253820989" />
+    <UnitTestResult executionId="0a9b46e6-7d1d-4a44-9610-46d47b4ae342" testId="250b3ceb-6fe5-056c-8bc2-e1d00ec26404" testName="LiuSmolkaTests.disconnectedExampleBigArea" computerName="thinkpad-t460s" duration="00:00:00.0007065" startTime="2022-06-18T12:11:10.8735402+02:00" endTime="2022-06-18T12:11:10.8735403+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a9b46e6-7d1d-4a44-9610-46d47b4ae342" />
+    <UnitTestResult executionId="99582d01-19df-480a-92b2-1f52615dbffe" testId="d23ffe7e-a3a1-68a8-1a7f-53f328d37697" testName="OnTheFlySolverTests.KastingNoSignals06Unsolvable" computerName="thinkpad-t460s" duration="00:00:00.0008376" startTime="2022-06-18T12:11:12.9662976+02:00" endTime="2022-06-18T12:11:12.9662978+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="99582d01-19df-480a-92b2-1f52615dbffe" />
+    <UnitTestResult executionId="550981ad-01de-4b5e-ae97-f0b3c7d04912" testId="09c5c7a4-b39c-c586-68c7-3f3b231a08c2" testName="OnTheFlySolverTests.Kasting00Solved" computerName="thinkpad-t460s" duration="00:00:00.0020695" startTime="2022-06-18T12:11:12.9691146+02:00" endTime="2022-06-18T12:11:12.9691147+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="550981ad-01de-4b5e-ae97-f0b3c7d04912" />
+    <UnitTestResult executionId="5661a343-3c55-4c51-9379-9a3a2a2e04e5" testId="9bea558e-9b0a-9de4-a821-4e4837e13ddb" testName="OnTheFlySolverTests.Lyngby07Solvable" computerName="thinkpad-t460s" duration="00:00:00.0057576" startTime="2022-06-18T12:11:12.9749998+02:00" endTime="2022-06-18T12:11:12.9750000+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5661a343-3c55-4c51-9379-9a3a2a2e04e5" />
+    <UnitTestResult executionId="5139809d-3a22-439a-80c2-70d4bbc9230f" testId="d9149618-290a-572c-cc2e-067be9f657c5" testName="Tests.linearAndPointWithSameID" computerName="thinkpad-t460s" duration="00:00:00.0039768" startTime="2022-06-18T12:11:10.9919560+02:00" endTime="2022-06-18T12:11:10.9919561+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5139809d-3a22-439a-80c2-70d4bbc9230f" />
+    <UnitTestResult executionId="50c11d0d-435c-4251-abe9-7f7f28d407fa" testId="097f26ca-d29c-7004-b740-5b1501b4e159" testName="Tests.kasting00" computerName="thinkpad-t460s" duration="00:00:00.0072570" startTime="2022-06-18T12:11:10.9913818+02:00" endTime="2022-06-18T12:11:10.9913818+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="50c11d0d-435c-4251-abe9-7f7f28d407fa" />
+    <UnitTestResult executionId="bea81b10-1d37-4744-8bab-05aef18b9487" testId="0a647154-d9b4-2c2f-ceb1-b87ec250c0bd" testName="LiuSmolkaTests.disconnectedExampleSmallArea" computerName="thinkpad-t460s" duration="00:00:00.0028349" startTime="2022-06-18T12:11:10.8737343+02:00" endTime="2022-06-18T12:11:10.8737343+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bea81b10-1d37-4744-8bab-05aef18b9487" />
+    <UnitTestResult executionId="01425f1d-d250-4a07-b7f9-ed403b17897c" testId="45006b6b-6f3b-293d-6f8e-7a2b05f89abf" testName="Tests.branchWellFormed" computerName="thinkpad-t460s" duration="00:00:00.0015127" startTime="2022-06-18T12:11:10.9915345+02:00" endTime="2022-06-18T12:11:10.9915346+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="01425f1d-d250-4a07-b7f9-ed403b17897c" />
+    <UnitTestResult executionId="081f1582-6a5b-444f-9628-01cb4d69bd39" testId="38e8eefa-e478-1bcb-f257-213ebf7db581" testName="Tests.cycleError" computerName="thinkpad-t460s" duration="00:00:00.0006175" startTime="2022-06-18T12:11:10.9918375+02:00" endTime="2022-06-18T12:11:10.9918376+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="081f1582-6a5b-444f-9628-01cb4d69bd39" />
+    <UnitTestResult executionId="3369b16c-da7e-46cd-a1f7-b3079271fc4c" testId="68395dd5-7ddc-36b8-7519-afdc41357904" testName="LiuSmolkaTests.graphExplorableFromAnyInitAllOne" computerName="thinkpad-t460s" duration="00:00:00.1146869" startTime="2022-06-18T12:11:10.7657730+02:00" endTime="2022-06-18T12:11:10.7658463+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3369b16c-da7e-46cd-a1f7-b3079271fc4c" />
+    <UnitTestResult executionId="2430535d-f088-4ad3-bcc0-e1a8f389459a" testId="55ca0554-c986-e11d-7736-f44ec48845aa" testName="Horn.Tests.simpleTrueHornFormula" computerName="thinkpad-t460s" duration="00:00:00.0031214" startTime="2022-06-18T12:11:10.8732573+02:00" endTime="2022-06-18T12:11:10.8732574+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2430535d-f088-4ad3-bcc0-e1a8f389459a" />
+    <UnitTestResult executionId="a0bef6fe-9c95-44fe-a407-daae2c8bb954" testId="cc4bd31d-9be1-bfed-aaa6-be430fc829d2" testName="Horn.Tests.simpleFalseHornFormula" computerName="thinkpad-t460s" duration="00:00:00.1388502" startTime="2022-06-18T12:11:10.8726470+02:00" endTime="2022-06-18T12:11:10.8726472+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a0bef6fe-9c95-44fe-a407-daae2c8bb954" />
+    <UnitTestResult executionId="9b4f716a-1014-49cb-a07d-1ff47aa89b88" testId="c735f2dd-c220-2e3c-421d-0af40e4f2eb3" testName="Tests.invalidLinearGoesToItself" computerName="thinkpad-t460s" duration="00:00:00.0007582" startTime="2022-06-18T12:11:10.9914654+02:00" endTime="2022-06-18T12:11:10.9914654+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9b4f716a-1014-49cb-a07d-1ff47aa89b88" />
+    <UnitTestResult executionId="57a71e51-b150-401c-8ce8-787c53fccc21" testId="f1331933-f9f4-c79a-2dc8-d15a2eba6e58" testName="OnTheFlySolverTests.Lyngby10Solvable" computerName="thinkpad-t460s" duration="00:00:02.1736175" startTime="2022-06-18T12:11:12.9634796+02:00" endTime="2022-06-18T12:11:12.9634797+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="57a71e51-b150-401c-8ce8-787c53fccc21" />
+    <UnitTestResult executionId="cb505fc2-1d00-489a-bfad-1f7771d6e051" testId="60613b19-b9f4-9fe5-0494-9e44c9553437" testName="OnTheFlySolverTests.SimpleGameNotSolvable" computerName="thinkpad-t460s" duration="00:00:00.0006207" startTime="2022-06-18T12:11:12.9669752+02:00" endTime="2022-06-18T12:11:12.9669753+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb505fc2-1d00-489a-bfad-1f7771d6e051" />
+    <UnitTestResult executionId="88b3c98a-260b-430f-a3d5-dff3706cfd71" testId="1f00072a-495c-e2ce-a391-87d106b8f5fb" testName="Tests.invalid09PointsConnected" computerName="thinkpad-t460s" duration="00:00:00.3327896" startTime="2022-06-18T12:11:10.9912879+02:00" endTime="2022-06-18T12:11:10.9912880+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="88b3c98a-260b-430f-a3d5-dff3706cfd71" />
+    <UnitTestResult executionId="eb900cdb-71e3-4b46-ae9c-e2bd90eaadf1" testId="7503bc02-09aa-4593-b18d-acb1e0bf101f" testName="LiuSmolkaTests.simpleGraphAllExporedFromInitNode" computerName="thinkpad-t460s" duration="00:00:00.0046039" startTime="2022-06-18T12:11:10.8736484+02:00" endTime="2022-06-18T12:11:10.8736486+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eb900cdb-71e3-4b46-ae9c-e2bd90eaadf1" />
+    <UnitTestResult executionId="20ab88cd-5920-4c6b-a3b6-e32109224d2d" testId="5897bedb-40c4-947b-a3b1-eafa63457987" testName="OnTheFlySolverTests.Branch05Solvable" computerName="thinkpad-t460s" duration="00:00:00.0023647" startTime="2022-06-18T12:11:12.9653340+02:00" endTime="2022-06-18T12:11:12.9653341+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20ab88cd-5920-4c6b-a3b6-e32109224d2d" />
+    <UnitTestResult executionId="73f80e8d-b10f-4e12-94f7-c47e4aad9c13" testId="812bf656-8243-1c93-0387-55fc7b3e413c" testName="LiuSmolkaTests.graphExplorableFromAnyInit" computerName="thinkpad-t460s" duration="00:00:00.0008120" startTime="2022-06-18T12:11:10.8734541+02:00" endTime="2022-06-18T12:11:10.8734542+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="73f80e8d-b10f-4e12-94f7-c47e4aad9c13" />
+    <UnitTestResult executionId="bc675072-4185-4d92-af40-c276bb070c82" testId="0f8873e5-d445-644a-11d9-8e557db3eb36" testName="Tests.linearDuplicate" computerName="thinkpad-t460s" duration="00:00:00.0070154" startTime="2022-06-18T12:11:10.9917481+02:00" endTime="2022-06-18T12:11:10.9917481+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bc675072-4185-4d92-af40-c276bb070c82" />
+    <UnitTestResult executionId="94b51154-a56b-4702-a795-5c1ea2814943" testId="2390493a-830c-5420-4025-2a8e524ddd6e" testName="LiuSmolkaTests.simpleGraphNotAllExplored" computerName="thinkpad-t460s" duration="00:00:00.0144943" startTime="2022-06-18T12:11:10.8733512+02:00" endTime="2022-06-18T12:11:10.8733513+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94b51154-a56b-4702-a795-5c1ea2814943" />
   </Results>
   <TestDefinitions>
-    <UnitTest name="OnTheFlySolverTests.KastingAlt01NotSolvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="46bf2de4-561d-6c4b-4335-ef74870385c7">
-      <Execution id="403fd77e-4a44-4234-a865-aed4459a4995" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="KastingAlt01NotSolvable" />
-    </UnitTest>
-    <UnitTest name="Tests.kasting00" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="097f26ca-d29c-7004-b740-5b1501b4e159">
-      <Execution id="d96dd935-eb42-4e9d-9396-e6d0e91c9e13" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="kasting00" />
-    </UnitTest>
-    <UnitTest name="OnTheFlySolverTests.Kasting00Solved" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="09c5c7a4-b39c-c586-68c7-3f3b231a08c2">
-      <Execution id="0dcc304e-7ee8-4864-9cc9-f6fc10ca4d99" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="Kasting00Solved" />
-    </UnitTest>
-    <UnitTest name="OnTheFlySolverTests.simpleGameSolved" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be">
-      <Execution id="440a01f9-583d-4e76-b44f-4a558ee2bac9" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="simpleGameSolved" />
-    </UnitTest>
-    <UnitTest name="Tests.cycleError" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="38e8eefa-e478-1bcb-f257-213ebf7db581">
-      <Execution id="d95bba43-912e-47b7-87e9-679ebc9bf4e9" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="cycleError" />
-    </UnitTest>
-    <UnitTest name="LiuSmolkaTests.simpleGraphAllExporedFromInitNode" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="7503bc02-09aa-4593-b18d-acb1e0bf101f">
-      <Execution id="0ef14688-0cdd-4e40-9233-feb60b13c667" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="simpleGraphAllExporedFromInitNode" />
-    </UnitTest>
-    <UnitTest name="OnTheFlySolverTests.Branch05Solvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="5897bedb-40c4-947b-a3b1-eafa63457987">
-      <Execution id="e535e772-bb8c-42f5-bdb8-233be74ab781" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="Branch05Solvable" />
-    </UnitTest>
-    <UnitTest name="Tests.Lyngby" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="f44b12f4-986c-eab0-30e0-a460f9d204ec">
-      <Execution id="21f8b8e0-2cdf-4da0-9623-19e0e54c899d" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="Lyngby" />
-    </UnitTest>
-    <UnitTest name="Tests.linearDuplicate" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="0f8873e5-d445-644a-11d9-8e557db3eb36">
-      <Execution id="db7eed7f-fe19-4ea3-b3fe-c19c70312602" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="linearDuplicate" />
-    </UnitTest>
-    <UnitTest name="Horn.Tests.simpleTrueHornFormula" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="55ca0554-c986-e11d-7736-f44ec48845aa">
-      <Execution id="c5244819-c997-4bd5-a24b-8bc825cdbf46" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Horn.Tests" name="simpleTrueHornFormula" />
-    </UnitTest>
-    <UnitTest name="LiuSmolkaTests.disconnectedExampleBigArea" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="250b3ceb-6fe5-056c-8bc2-e1d00ec26404">
-      <Execution id="7b921923-d30f-4e20-b61b-b28bdde9bf88" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="disconnectedExampleBigArea" />
-    </UnitTest>
-    <UnitTest name="OnTheFlySolverTests.Lyngby07Solvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="9bea558e-9b0a-9de4-a821-4e4837e13ddb">
-      <Execution id="52a2caab-bc17-4031-9ed2-95c078c3e22b" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="Lyngby07Solvable" />
-    </UnitTest>
-    <UnitTest name="Horn.Tests.simpleFalseHornFormula" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="cc4bd31d-9be1-bfed-aaa6-be430fc829d2">
-      <Execution id="d27c662f-70dc-4d65-958a-bc31a1d61957" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Horn.Tests" name="simpleFalseHornFormula" />
-    </UnitTest>
-    <UnitTest name="LiuSmolkaTests.simpleGraphNotAllExplored" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="2390493a-830c-5420-4025-2a8e524ddd6e">
-      <Execution id="52f72587-52f0-43e4-af83-f8d2a5bfb00f" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="simpleGraphNotAllExplored" />
-    </UnitTest>
     <UnitTest name="LiuSmolkaTests.graphExplorableFromAnyInit" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="812bf656-8243-1c93-0387-55fc7b3e413c">
-      <Execution id="23f2071b-22b5-4752-aa84-1741de3a56de" />
+      <Execution id="73f80e8d-b10f-4e12-94f7-c47e4aad9c13" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="graphExplorableFromAnyInit" />
     </UnitTest>
-    <UnitTest name="OnTheFlySolverTests.SimpleGameNotSolvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="60613b19-b9f4-9fe5-0494-9e44c9553437">
-      <Execution id="90b99329-9317-45cc-9d02-a22dfd4c2024" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="SimpleGameNotSolvable" />
-    </UnitTest>
-    <UnitTest name="Tests.branchWellFormed" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="45006b6b-6f3b-293d-6f8e-7a2b05f89abf">
-      <Execution id="9c11d32b-0c0d-49f2-9599-c6fcf7dd45df" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="branchWellFormed" />
-    </UnitTest>
-    <UnitTest name="LiuSmolkaTests.graphExplorableFromAnyInitAllOne" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="68395dd5-7ddc-36b8-7519-afdc41357904">
-      <Execution id="e32379a6-28fe-47e4-be31-e90a866a6af6" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="graphExplorableFromAnyInitAllOne" />
-    </UnitTest>
-    <UnitTest name="OnTheFlySolverTests.KastingNoSignals06Unsolvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="d23ffe7e-a3a1-68a8-1a7f-53f328d37697">
-      <Execution id="6a84d8fc-b040-45d9-b70d-f3f8929ddaa3" />
-      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="KastingNoSignals06Unsolvable" />
+    <UnitTest name="Horn.Tests.simpleFalseHornFormula" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="cc4bd31d-9be1-bfed-aaa6-be430fc829d2">
+      <Execution id="a0bef6fe-9c95-44fe-a407-daae2c8bb954" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Horn.Tests" name="simpleFalseHornFormula" />
     </UnitTest>
     <UnitTest name="Tests.linearAndPointWithSameID" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="d9149618-290a-572c-cc2e-067be9f657c5">
-      <Execution id="ee50d833-c71c-43e2-95db-26ad63dbedf2" />
+      <Execution id="5139809d-3a22-439a-80c2-70d4bbc9230f" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="linearAndPointWithSameID" />
     </UnitTest>
+    <UnitTest name="LiuSmolkaTests.simpleGraphAllExporedFromInitNode" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="7503bc02-09aa-4593-b18d-acb1e0bf101f">
+      <Execution id="eb900cdb-71e3-4b46-ae9c-e2bd90eaadf1" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="simpleGraphAllExporedFromInitNode" />
+    </UnitTest>
+    <UnitTest name="Tests.invalidLinearGoesToItself" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="c735f2dd-c220-2e3c-421d-0af40e4f2eb3">
+      <Execution id="9b4f716a-1014-49cb-a07d-1ff47aa89b88" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="invalidLinearGoesToItself" />
+    </UnitTest>
+    <UnitTest name="Tests.kasting00" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="097f26ca-d29c-7004-b740-5b1501b4e159">
+      <Execution id="50c11d0d-435c-4251-abe9-7f7f28d407fa" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="kasting00" />
+    </UnitTest>
+    <UnitTest name="Tests.branchWellFormed" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="45006b6b-6f3b-293d-6f8e-7a2b05f89abf">
+      <Execution id="01425f1d-d250-4a07-b7f9-ed403b17897c" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="branchWellFormed" />
+    </UnitTest>
+    <UnitTest name="Tests.cycleError" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="38e8eefa-e478-1bcb-f257-213ebf7db581">
+      <Execution id="081f1582-6a5b-444f-9628-01cb4d69bd39" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="cycleError" />
+    </UnitTest>
+    <UnitTest name="OnTheFlySolverTests.KastingNoSignals06Unsolvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="d23ffe7e-a3a1-68a8-1a7f-53f328d37697">
+      <Execution id="99582d01-19df-480a-92b2-1f52615dbffe" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="KastingNoSignals06Unsolvable" />
+    </UnitTest>
+    <UnitTest name="Tests.Lyngby" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="f44b12f4-986c-eab0-30e0-a460f9d204ec">
+      <Execution id="b96c47c3-4297-4de6-b847-69f17c6c5158" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="Lyngby" />
+    </UnitTest>
+    <UnitTest name="OnTheFlySolverTests.Branch05Solvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="5897bedb-40c4-947b-a3b1-eafa63457987">
+      <Execution id="20ab88cd-5920-4c6b-a3b6-e32109224d2d" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="Branch05Solvable" />
+    </UnitTest>
+    <UnitTest name="OnTheFlySolverTests.SimpleGameNotSolvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="60613b19-b9f4-9fe5-0494-9e44c9553437">
+      <Execution id="cb505fc2-1d00-489a-bfad-1f7771d6e051" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="SimpleGameNotSolvable" />
+    </UnitTest>
+    <UnitTest name="LiuSmolkaTests.simpleGraphNotAllExplored" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="2390493a-830c-5420-4025-2a8e524ddd6e">
+      <Execution id="94b51154-a56b-4702-a795-5c1ea2814943" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="simpleGraphNotAllExplored" />
+    </UnitTest>
+    <UnitTest name="OnTheFlySolverTests.KastingAlt01NotSolvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="46bf2de4-561d-6c4b-4335-ef74870385c7">
+      <Execution id="0f59b977-c4aa-4b2d-9180-dbb253820989" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="KastingAlt01NotSolvable" />
+    </UnitTest>
+    <UnitTest name="Tests.invalid09PointsConnected" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="1f00072a-495c-e2ce-a391-87d106b8f5fb">
+      <Execution id="88b3c98a-260b-430f-a3d5-dff3706cfd71" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="invalid09PointsConnected" />
+    </UnitTest>
+    <UnitTest name="OnTheFlySolverTests.Lyngby07Solvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="9bea558e-9b0a-9de4-a821-4e4837e13ddb">
+      <Execution id="5661a343-3c55-4c51-9379-9a3a2a2e04e5" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="Lyngby07Solvable" />
+    </UnitTest>
+    <UnitTest name="OnTheFlySolverTests.simpleGameSolved" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be">
+      <Execution id="ad0053e1-6b80-464e-9c3f-02430e5b11df" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="simpleGameSolved" />
+    </UnitTest>
+    <UnitTest name="LiuSmolkaTests.graphExplorableFromAnyInitAllOne" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="68395dd5-7ddc-36b8-7519-afdc41357904">
+      <Execution id="3369b16c-da7e-46cd-a1f7-b3079271fc4c" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="graphExplorableFromAnyInitAllOne" />
+    </UnitTest>
+    <UnitTest name="OnTheFlySolverTests.Kasting00Solved" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="09c5c7a4-b39c-c586-68c7-3f3b231a08c2">
+      <Execution id="550981ad-01de-4b5e-ae97-f0b3c7d04912" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="Kasting00Solved" />
+    </UnitTest>
     <UnitTest name="LiuSmolkaTests.disconnectedExampleSmallArea" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="0a647154-d9b4-2c2f-ceb1-b87ec250c0bd">
-      <Execution id="24cb287d-b281-4aeb-ad7d-ab1c5fa5f484" />
+      <Execution id="bea81b10-1d37-4744-8bab-05aef18b9487" />
       <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="disconnectedExampleSmallArea" />
+    </UnitTest>
+    <UnitTest name="LiuSmolkaTests.disconnectedExampleBigArea" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="250b3ceb-6fe5-056c-8bc2-e1d00ec26404">
+      <Execution id="0a9b46e6-7d1d-4a44-9610-46d47b4ae342" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LiuSmolkaTests" name="disconnectedExampleBigArea" />
+    </UnitTest>
+    <UnitTest name="Tests.linearDuplicate" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="0f8873e5-d445-644a-11d9-8e557db3eb36">
+      <Execution id="bc675072-4185-4d92-af40-c276bb070c82" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Tests" name="linearDuplicate" />
+    </UnitTest>
+    <UnitTest name="OnTheFlySolverTests.Lyngby10Solvable" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="f1331933-f9f4-c79a-2dc8-d15a2eba6e58">
+      <Execution id="57a71e51-b150-401c-8ce8-787c53fccc21" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="OnTheFlySolverTests" name="Lyngby10Solvable" />
+    </UnitTest>
+    <UnitTest name="Horn.Tests.simpleTrueHornFormula" storage="/home/markus/documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/testsuite/bin/debug/net6.0/testsuite.dll" id="55ca0554-c986-e11d-7736-f44ec48845aa">
+      <Execution id="2430535d-f088-4ad3-bcc0-e1a8f389459a" />
+      <TestMethod codeBase="/home/markus/Documents/university/bachelor/sem04/bachelor-thesis/alternating-games-solver/src/TestSuite/bin/Debug/net6.0/TestSuite.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Horn.Tests" name="simpleTrueHornFormula" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="46bf2de4-561d-6c4b-4335-ef74870385c7" executionId="403fd77e-4a44-4234-a865-aed4459a4995" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="097f26ca-d29c-7004-b740-5b1501b4e159" executionId="d96dd935-eb42-4e9d-9396-e6d0e91c9e13" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="812bf656-8243-1c93-0387-55fc7b3e413c" executionId="23f2071b-22b5-4752-aa84-1741de3a56de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cc4bd31d-9be1-bfed-aaa6-be430fc829d2" executionId="d27c662f-70dc-4d65-958a-bc31a1d61957" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="38e8eefa-e478-1bcb-f257-213ebf7db581" executionId="d95bba43-912e-47b7-87e9-679ebc9bf4e9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="d23ffe7e-a3a1-68a8-1a7f-53f328d37697" executionId="6a84d8fc-b040-45d9-b70d-f3f8929ddaa3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="45006b6b-6f3b-293d-6f8e-7a2b05f89abf" executionId="9c11d32b-0c0d-49f2-9599-c6fcf7dd45df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="68395dd5-7ddc-36b8-7519-afdc41357904" executionId="e32379a6-28fe-47e4-be31-e90a866a6af6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0f8873e5-d445-644a-11d9-8e557db3eb36" executionId="db7eed7f-fe19-4ea3-b3fe-c19c70312602" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="2390493a-830c-5420-4025-2a8e524ddd6e" executionId="52f72587-52f0-43e4-af83-f8d2a5bfb00f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="5897bedb-40c4-947b-a3b1-eafa63457987" executionId="e535e772-bb8c-42f5-bdb8-233be74ab781" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be" executionId="440a01f9-583d-4e76-b44f-4a558ee2bac9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="7503bc02-09aa-4593-b18d-acb1e0bf101f" executionId="0ef14688-0cdd-4e40-9233-feb60b13c667" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="60613b19-b9f4-9fe5-0494-9e44c9553437" executionId="90b99329-9317-45cc-9d02-a22dfd4c2024" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0a647154-d9b4-2c2f-ceb1-b87ec250c0bd" executionId="24cb287d-b281-4aeb-ad7d-ab1c5fa5f484" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="9bea558e-9b0a-9de4-a821-4e4837e13ddb" executionId="52a2caab-bc17-4031-9ed2-95c078c3e22b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="d9149618-290a-572c-cc2e-067be9f657c5" executionId="ee50d833-c71c-43e2-95db-26ad63dbedf2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="55ca0554-c986-e11d-7736-f44ec48845aa" executionId="c5244819-c997-4bd5-a24b-8bc825cdbf46" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="f44b12f4-986c-eab0-30e0-a460f9d204ec" executionId="21f8b8e0-2cdf-4da0-9623-19e0e54c899d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="250b3ceb-6fe5-056c-8bc2-e1d00ec26404" executionId="7b921923-d30f-4e20-b61b-b28bdde9bf88" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="09c5c7a4-b39c-c586-68c7-3f3b231a08c2" executionId="0dcc304e-7ee8-4864-9cc9-f6fc10ca4d99" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f44b12f4-986c-eab0-30e0-a460f9d204ec" executionId="b96c47c3-4297-4de6-b847-69f17c6c5158" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ab74a0fe-ca0b-1f1f-a695-4f3bc77c21be" executionId="ad0053e1-6b80-464e-9c3f-02430e5b11df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="46bf2de4-561d-6c4b-4335-ef74870385c7" executionId="0f59b977-c4aa-4b2d-9180-dbb253820989" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="250b3ceb-6fe5-056c-8bc2-e1d00ec26404" executionId="0a9b46e6-7d1d-4a44-9610-46d47b4ae342" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d23ffe7e-a3a1-68a8-1a7f-53f328d37697" executionId="99582d01-19df-480a-92b2-1f52615dbffe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09c5c7a4-b39c-c586-68c7-3f3b231a08c2" executionId="550981ad-01de-4b5e-ae97-f0b3c7d04912" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9bea558e-9b0a-9de4-a821-4e4837e13ddb" executionId="5661a343-3c55-4c51-9379-9a3a2a2e04e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9149618-290a-572c-cc2e-067be9f657c5" executionId="5139809d-3a22-439a-80c2-70d4bbc9230f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="097f26ca-d29c-7004-b740-5b1501b4e159" executionId="50c11d0d-435c-4251-abe9-7f7f28d407fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0a647154-d9b4-2c2f-ceb1-b87ec250c0bd" executionId="bea81b10-1d37-4744-8bab-05aef18b9487" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="45006b6b-6f3b-293d-6f8e-7a2b05f89abf" executionId="01425f1d-d250-4a07-b7f9-ed403b17897c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="38e8eefa-e478-1bcb-f257-213ebf7db581" executionId="081f1582-6a5b-444f-9628-01cb4d69bd39" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="68395dd5-7ddc-36b8-7519-afdc41357904" executionId="3369b16c-da7e-46cd-a1f7-b3079271fc4c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="55ca0554-c986-e11d-7736-f44ec48845aa" executionId="2430535d-f088-4ad3-bcc0-e1a8f389459a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc4bd31d-9be1-bfed-aaa6-be430fc829d2" executionId="a0bef6fe-9c95-44fe-a407-daae2c8bb954" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c735f2dd-c220-2e3c-421d-0af40e4f2eb3" executionId="9b4f716a-1014-49cb-a07d-1ff47aa89b88" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f1331933-f9f4-c79a-2dc8-d15a2eba6e58" executionId="57a71e51-b150-401c-8ce8-787c53fccc21" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60613b19-b9f4-9fe5-0494-9e44c9553437" executionId="cb505fc2-1d00-489a-bfad-1f7771d6e051" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f00072a-495c-e2ce-a391-87d106b8f5fb" executionId="88b3c98a-260b-430f-a3d5-dff3706cfd71" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7503bc02-09aa-4593-b18d-acb1e0bf101f" executionId="eb900cdb-71e3-4b46-ae9c-e2bd90eaadf1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5897bedb-40c4-947b-a3b1-eafa63457987" executionId="20ab88cd-5920-4c6b-a3b6-e32109224d2d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="812bf656-8243-1c93-0387-55fc7b3e413c" executionId="73f80e8d-b10f-4e12-94f7-c47e4aad9c13" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f8873e5-d445-644a-11d9-8e557db3eb36" executionId="bc675072-4185-4d92-af40-c276bb070c82" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2390493a-830c-5420-4025-2a8e524ddd6e" executionId="94b51154-a56b-4702-a795-5c1ea2814943" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
   <ResultSummary outcome="Completed">
-    <Counters total="21" executed="21" passed="21" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Counters total="24" executed="24" passed="24" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
       <StdOut>[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 6.0.5)
-[xUnit.net 00:00:00.71]   Discovering: TestSuite
-[xUnit.net 00:00:00.79]   Discovered:  TestSuite
-[xUnit.net 00:00:00.79]   Starting:    TestSuite
-[xUnit.net 00:00:01.16]   Finished:    TestSuite
+[xUnit.net 00:00:00.86]   Discovering: TestSuite
+[xUnit.net 00:00:00.93]   Discovered:  TestSuite
+[xUnit.net 00:00:00.93]   Starting:    TestSuite
+[xUnit.net 00:00:03.47]   Finished:    TestSuite
 </StdOut>
     </Output>
   </ResultSummary>

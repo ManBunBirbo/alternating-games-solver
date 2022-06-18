@@ -1,6 +1,6 @@
 module Utils
 
-open FSharp.Text.Lexing 
+open FSharp.Text.Lexing
 
 // use inputChannel = new StreamReader(File.OpenRead tempFileName)
 // let lexbuf = LexBuffer<_>.FromTextReader inputChannel

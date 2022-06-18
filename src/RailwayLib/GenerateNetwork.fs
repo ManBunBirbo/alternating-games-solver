@@ -39,7 +39,9 @@ module GenerateNetwork =
         let rec processConnsAux (ls, ps, csUp, csDown as pt) =
             function
             | [] -> pt
-            | (p1, p2) :: cs -> // processConnsRecAux pt c cs
+            | (s1, s2) :: cs -> 
+                let p1, p2 = toPort s1, toPort s2
+
                 let ls', ps' =
                     match p1, p2 with
                     | L id1, L id2 -> Set.add id1 ls |> Set.add id2, ps
@@ -176,11 +178,9 @@ module GenerateNetwork =
             raiseNetworkError "A cycle is present in the railway network."
 
     /// Convert lists of conn(ection)s, signals, and trains to a railway network.
-    let toNetwork connsList signalList trainList =
+    let toNetwork (connsList, signalList, trainList) =
         try 
-            let linears, points, connsUp, connsDown = 
-                List.map (fun (p1, p2) -> toPort p1, toPort p2) connsList
-                |> processConns 
+            let linears, points, connsUp, connsDown = processConns connsList
 
             let signals = Set.ofList signalList
             let trains = getTrainMap linears trainList

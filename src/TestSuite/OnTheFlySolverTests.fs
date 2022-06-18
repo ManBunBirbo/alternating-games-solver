@@ -53,7 +53,7 @@ let isTestFileSolvable testFileName =
     let network = 
         loadTestFile testFileName 
         |> parse 
-        |||> toNetwork 
+        |> toNetwork 
 
     // Assert.True(isWellFormed network)
 
@@ -79,3 +79,7 @@ let KastingNoSignals06Unsolvable () =
 [<Fact>]
 let Lyngby07Solvable () = 
     Assert.True(isTestFileSolvable "07-lyngby.txt")
+
+[<Fact>]
+let Lyngby10Solvable () = 
+    Assert.True(isTestFileSolvable "10-lyngby-more-trains.txt")

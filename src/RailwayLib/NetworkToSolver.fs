@@ -23,7 +23,10 @@ module GameFunctions =
             ss
         |> getCombinations
         
+    /// Only get the points that trains have a chance of reaching currently. 
     let getRelevantMinusPoints tsUp tsDown csUp csDown ps = 
+        /// Auxiliary function to see if a port is next to the port with id for
+        /// a given map of connections cs. 
         let isNextTo id cs = 
             function 
             | None -> false 
@@ -35,59 +38,54 @@ module GameFunctions =
                 || Array.exists (isNextTo id csDown) tsDown) 
             ps 
         |> getCombinations
+
+    /// Move to the next linear segment if signals/other trains allow. 
+    let rec move currentPos conns (TGS (tsUp, tsDown, rss, mps) as tgs) =
+        match currentPos with
+        | None -> None
+        | Some (L id) as pOpt when Set.contains id rss -> pOpt
+        | Some p ->
+            match Map.tryFind p conns with
+            | Some (L _) as pOpt when noTrainAt pOpt tsUp tsDown -> pOpt
+            | Some (P id) when not (Set.contains id mps) -> move (Some(S id)) conns tgs
+            | Some (M id) when Set.contains id mps -> move (Some(S id)) conns tgs
+            | Some (S id) when Set.contains id mps -> move (Some(M id)) conns tgs
+            | Some (S id) -> move (Some(P id)) conns tgs
+            | _ -> None
     
-    let toSolver (N (_, points, connsUp, connsDown, signals, trains)) =
+    let toSolver (N (_, points, connsUp, connsDown, signals, trains)) =   
 
-        let minusPointsConfigs = getCombinations points        
+        let simRel 
+            (TGS (tsUp1, tsDown1, _, _), i1 as c1) 
+            (TGS (tsUp2, tsDown2, _, _), i2 as c2) = 
 
-        let simRel (TGS (tsUp1, tsDown1, rss1, mps1), i1 as c1) (TGS (tsUp2, tsDown2, rss2, mps2), i2 as c2) = 
             match i1, i2 with 
             | One, One -> tsUp1 = tsUp2 && tsDown1 = tsDown2
-            | Two, Two -> 
-                // Player two just needs one losing state. If there exists a possibity for a crash 
-                // in c2, and that SAME possibilty exists in c1 then that must be losing too. 
-                // Array.exists2 
-                //     (fun a1 a2 -> 
-                //         // the move is the same 
-                //         // a1 = a2?
-                //         false
-                //         )
-                //     move 
-                c1 = c2
+            | Two, Two -> c1 = c2 
             | _ -> false 
-
-
 
         let edgesOne (TGS (tsUp, tsDown, _, _)) =
             let mutable nextStates = Set.empty
 
-            for rsc in getRelevantSignals tsUp tsDown signals do
-                for mpc in getRelevantMinusPoints tsUp tsDown connsUp connsDown points do
+            // TODO Rewrite and make n variable. 
+            let n = 1
+            let x' = getRelevantSignals tsUp tsDown signals 
+            let maxS = List.maxBy Set.count x' |> Set.count
+            let x = List.filter (fun s -> Set.count s >= maxS - n) x'
+            let y = getRelevantMinusPoints tsUp tsDown connsUp connsDown points
+            for rsc in x do
+                for mpc in y do
                     nextStates <- Set.add (TGS(tsUp, tsDown, rsc, mpc)) nextStates
 
             nextStates
 
-        let edgesTwo (TGS (tsUp, tsDown, rss, mps)) =
-
-            /// Move to the next linear segment if signals/other trains allow. 
-            let rec move currentPos conns =
-                match currentPos with
-                | None -> None
-                | Some (L id) as pOpt when Set.contains id rss -> pOpt
-                | Some p ->
-                    match Map.tryFind p conns with
-                    | Some (L _) as pOpt when noTrainAt pOpt tsDown tsDown -> pOpt
-                    | Some (P id) when not (Set.contains id mps) -> move (Some(S id)) conns
-                    | Some (M id) when Set.contains id mps -> move (Some(S id)) conns
-                    | Some (S id) when Set.contains id mps -> move (Some(M id)) conns
-                    | Some (S id) -> move (Some(P id)) conns
-                    | _ -> None
+        let edgesTwo (TGS (tsUp, tsDown, rss, mps) as tgs) =
 
             let mutable nextStates = Set.empty
 
             for i in [ 0 .. Array.length tsUp - 1 ] do
                 let tsUp' =
-                    move tsUp.[i] connsUp
+                    move tsUp.[i] connsUp tgs
                     |> copyArrayReplaceValue tsUp i
 
                 if tsUp' <> tsUp then
@@ -95,7 +93,7 @@ module GameFunctions =
 
             for j in [ 0 .. Array.length tsDown - 1 ] do
                 let tsDown' =
-                    move tsDown.[j] connsDown
+                    move tsDown.[j] connsDown tgs
                     |> copyArrayReplaceValue tsDown j
 
                 if tsDown' <> tsDown then
@@ -106,8 +104,6 @@ module GameFunctions =
         let edges (destUp, destDown) player (TGS (tsUp, tsDown, _, _) as state) = 
 
             let reachable dest ts conns  = 
-                assert (Array.length dest = Array.length ts) 
-
                 Array.forall2
                     (fun t d -> 
                         match t with 
