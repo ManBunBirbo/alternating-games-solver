@@ -1,24 +1,38 @@
 ﻿// For more information see https://aka.ms/fsharp-console-apps
 open RailwayLib
 open GenerateNetwork
-open RailwayLib.GameFunctions
-open Utils
+open RailwayLib.ToGameSolver
+open ProgramUtils
 open System.IO
-open OnTheFlySolver
+open System.Timers
 
 // How to read a file: https://stackoverflow.com/a/2366649
 
 let isRailwayGameSolvable fileText = 
     try 
-        parse fileText
-        |> toNetwork
-        |> toSolver 
-        |> fun solver -> solver.solve    
-        |> fun isSolvable -> if isSolvable then "" else "not "
-        |> printfn "The railway network is %ssolvable."
+        // printfn "Parsing file and attempting to generate railway network."
+        let network = 
+            parse fileText
+            |> railwayParserOutputToNetwork
+        
+        printfn "File parsed successfully."
+
+        let solver = toSolver network
+
+        printfn "Analyzing if game can be solved..."
+        
+        let stopWatch = System.Diagnostics.Stopwatch.StartNew()
+        let isSolvable = solver.solve 
+        stopWatch.Stop()
+
+        (if isSolvable then "" else "n't")
+        |> printfn 
+            "In %f ms, analyzing %i states, it was determined that the railway network is%s solvable."
+            stopWatch.Elapsed.TotalMilliseconds
+            (getNoOfStates ())
     with
         | :? NetworkError as err -> 
-            printfn $"NetworkError: %s{err.Message}"  
+            printfn $"NetworkError: %s{err.Message}"
 
 [<EntryPoint>]
 let main argv = 
@@ -40,4 +54,4 @@ let main argv =
               containing a representation of a strictly-alternating game.\n\
               The path can be absolute or relative to %s{cwdir}." 
     
-    0 // Terminated succesfully. 
+    0 // Terminated successfully. 

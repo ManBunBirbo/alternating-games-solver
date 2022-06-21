@@ -1,9 +1,7 @@
 { // Do not indent. 
-module Lexer 
-
 open FSharp.Text.Lexing 
 open System 
-open Parser 
+open RailwayParser
 
 // Set the language to English such that 4.0 is parsed as 4 and not 40.
 System.Globalization.CultureInfo.CurrentCulture <- 

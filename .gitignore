@@ -5,12 +5,14 @@
 .vscode/*
 !.vscode/settings.json
 
+*.user
+
 # F# build results.
 **/[Bb]in/
 **/[Oo]bj/
 
 # Lexer and paser builds. 
-Lexer.fs
-Parser.fs 
-Parser.fsi
+*Lexer.fs
+*Parser.fs 
+*Parser.fsi
 .fake

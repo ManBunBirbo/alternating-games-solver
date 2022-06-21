@@ -1,81 +1,76 @@
 namespace RailwayLib
 
-module GameFunctions =
+module ToGameSolver =
 
-    open AuxilaryRailwayFunctions
+    open AuxiliaryRailwayFunctions
     open OnTheFlySolver.Solver
     open OnTheFlySolver.Player
+    
+    let mutable noOfStates = 0
 
     /// Any of trains crashed in either direction. 
-    let hasCrashed tsUp tsDown =
-        Array.contains None tsUp || Array.contains None tsDown
+    let hasCrashed trainsUp trainsDown = Array.contains None trainsUp || Array.contains None trainsDown
 
     /// No train at the location of port in either direction. 
-    let noTrainAt port tsUp tsDown =
-        not (Array.contains port tsUp || Array.contains port tsDown)
+    let noTrainAt port trainsUp trainsDown = not (Array.contains port trainsUp || Array.contains port trainsDown)
 
     /// Only look at signals who can currently block trains. 
-    let getRelevantSignals tsUp tsDown ss =
+    let getRelevantSignals trainsUp trainsDown redSignals =
         Set.filter 
-            (fun rs -> 
-                Array.contains (Some (L rs)) tsUp 
-                || Array.contains (Some (L rs)) tsDown)
-            ss
-        |> getCombinations
+            (fun rs -> Array.contains (Some (L rs)) trainsUp || Array.contains (Some (L rs)) trainsDown)
+            redSignals
+        |> supersetOf
         
     /// Only get the points that trains have a chance of reaching currently. 
-    let getRelevantMinusPoints tsUp tsDown csUp csDown ps = 
+    let getRelevantMinusPoints trainsUp trainsDown connectionsUp connectionsDown points = 
         /// Auxiliary function to see if a port is next to the port with id for
         /// a given map of connections cs. 
-        let isNextTo id cs = 
-            function 
+        let isNextTo id cs = function 
             | None -> false 
             | Some p -> List.exists (portWithId id) (getNeighbours p cs)
 
         Set.filter 
-            (fun id -> 
-                Array.exists (isNextTo id csUp) tsUp 
-                || Array.exists (isNextTo id csDown) tsDown) 
-            ps 
-        |> getCombinations
+            (fun id ->
+                Array.exists (isNextTo id connectionsUp) trainsUp
+                || Array.exists (isNextTo id connectionsDown) trainsDown) 
+            points 
+        |> supersetOf
 
     /// Move to the next linear segment if signals/other trains allow. 
-    let rec move currentPos conns (TGS (tsUp, tsDown, rss, mps) as tgs) =
+    let rec move currentPos connections (TGS (trainsUp, trainsDown, redSignals, minusPoints) as tgs) =
         match currentPos with
         | None -> None
-        | Some (L id) as pOpt when Set.contains id rss -> pOpt
+        | Some (L id) as pOpt when Set.contains id redSignals -> pOpt
         | Some p ->
-            match Map.tryFind p conns with
-            | Some (L _) as pOpt when noTrainAt pOpt tsUp tsDown -> pOpt
-            | Some (P id) when not (Set.contains id mps) -> move (Some(S id)) conns tgs
-            | Some (M id) when Set.contains id mps -> move (Some(S id)) conns tgs
-            | Some (S id) when Set.contains id mps -> move (Some(M id)) conns tgs
-            | Some (S id) -> move (Some(P id)) conns tgs
+            match Map.tryFind p connections with
+            | Some (L _) as pOpt when noTrainAt pOpt trainsUp trainsDown -> pOpt
+            | Some (P id) when not (Set.contains id minusPoints) -> move (Some(S id)) connections tgs
+            | Some (M id) when Set.contains id minusPoints -> move (Some(S id)) connections tgs
+            | Some (S id) when Set.contains id minusPoints -> move (Some(M id)) connections tgs
+            | Some (S id) -> move (Some(P id)) connections tgs
             | _ -> None
     
-    let toSolver (N (_, points, connsUp, connsDown, signals, trains)) =   
+    let toSolver (N (_, points, connectionsUp, connectionsDown, signals, trains)) =   
 
-        let simRel 
-            (TGS (tsUp1, tsDown1, _, _), i1 as c1) 
-            (TGS (tsUp2, tsDown2, _, _), i2 as c2) = 
-
+        let simRel (TGS (trainsUP1, trainsDown1, _, _), i1 as c1) (TGS (trainsUp2, trainsDown2, _, _), i2 as c2) = 
             match i1, i2 with 
-            | One, One -> tsUp1 = tsUp2 && tsDown1 = tsDown2
+            | One, One -> trainsUP1 = trainsUp2 && trainsDown1 = trainsDown2
             | Two, Two -> c1 = c2 
             | _ -> false 
 
-        let edgesOne (TGS (tsUp, tsDown, _, _)) =
+        let edgesOne (TGS (trainsUp, trainsDown, _, _)) =
             let mutable nextStates = Set.empty
 
             // TODO Rewrite and make n variable. 
             let n = 1
-            let x' = getRelevantSignals tsUp tsDown signals 
+            let x' = getRelevantSignals trainsUp trainsDown signals 
             let maxS = List.maxBy Set.count x' |> Set.count
             let x = List.filter (fun s -> Set.count s >= maxS - n) x'
-            let y = getRelevantMinusPoints tsUp tsDown connsUp connsDown points
+            let y = getRelevantMinusPoints trainsUp trainsDown connectionsUp connectionsDown points
             for rsc in x do
                 for mpc in y do
-                    nextStates <- Set.add (TGS(tsUp, tsDown, rsc, mpc)) nextStates
+                    nextStates <- Set.add (TGS(trainsUp, trainsDown, rsc, mpc)) nextStates
+                    noOfStates <- noOfStates + 1
 
             nextStates
 
@@ -85,7 +80,7 @@ module GameFunctions =
 
             for i in [ 0 .. Array.length tsUp - 1 ] do
                 let tsUp' =
-                    move tsUp.[i] connsUp tgs
+                    move tsUp.[i] connectionsUp tgs
                     |> copyArrayReplaceValue tsUp i
 
                 if tsUp' <> tsUp then
@@ -93,7 +88,7 @@ module GameFunctions =
 
             for j in [ 0 .. Array.length tsDown - 1 ] do
                 let tsDown' =
-                    move tsDown.[j] connsDown tgs
+                    move tsDown.[j] connectionsDown tgs
                     |> copyArrayReplaceValue tsDown j
 
                 if tsDown' <> tsDown then
@@ -112,7 +107,7 @@ module GameFunctions =
                     ts 
                     dest 
 
-            if hasCrashed tsUp tsDown || not (reachable destUp tsUp connsUp) || not (reachable destDown tsDown connsDown) then
+            if hasCrashed tsUp tsDown || not (reachable destUp tsUp connectionsUp) || not (reachable destDown tsDown connectionsDown) then
                 Set.empty 
             else 
                 match player with 
@@ -127,7 +122,7 @@ module GameFunctions =
                     let tupleOpt = Some pStart, Some pFinal
 
                     // Train travelling up or down. Assumes all trains can reach their destination.
-                    if dfs connsUp pStart Set.empty
+                    if dfs connectionsUp pStart Set.empty
                        |> Set.contains pFinal then
                         tupleOpt :: ups, downs
                     else
@@ -153,3 +148,5 @@ module GameFunctions =
         let game = edges1, edges2, isGoalState
 
         new OnTheFlySolver<TrainGameState>(game, simRel, initConfig)
+
+    let getNoOfStates () = noOfStates

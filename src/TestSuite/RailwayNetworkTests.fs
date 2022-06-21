@@ -1,15 +1,15 @@
-module Tests
+module RailwayNetwork
 
 open Xunit
 open RailwayLib
 open RailwayLib.GenerateNetwork
 open TestUtils
-open Utils
+open ProgramUtils
 
 let testFileToNetwork filename = 
     loadTestFile filename 
     |> parse 
-    |> toNetwork
+    |> railwayParserOutputToNetwork
 
 [<Fact>]
 let kasting00 () =

@@ -1,6 +1,6 @@
 module TestUtils 
 
-open Utils 
+open ProgramUtils 
 open RailwayLib.GenerateNetwork
 
 let loadTestFile fileName =
@@ -11,4 +11,4 @@ let testFileToNetwork filename =
     __SOURCE_DIRECTORY__ + "/input/" + filename 
     |> System.IO.File.ReadAllText 
     |> parse 
-    |> toNetwork
+    |> railwayParserOutputToNetwork

@@ -5,8 +5,8 @@ open OnTheFlySolver.Player
 open OnTheFlySolver.Solver
 open Xunit
 open TestUtils
-open RailwayLib.GameFunctions
-open Utils
+open RailwayLib.ToGameSolver
+open ProgramUtils
 open RailwayLib.GenerateNetwork
 
 
@@ -53,7 +53,7 @@ let isTestFileSolvable testFileName =
     let network = 
         loadTestFile testFileName 
         |> parse 
-        |> toNetwork 
+        |> railwayParserOutputToNetwork 
 
     // Assert.True(isWellFormed network)
 

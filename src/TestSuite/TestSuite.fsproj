@@ -5,11 +5,11 @@
     <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Utils.fs" />
+    <Compile Include="TestUtils.fs" />
     <Compile Include="HornTests.fs" />
     <Compile Include="SimpleLiuSmolkaTests.fs" />
     <Compile Include="OnTheFlySolverTests.fs" />
-    <Compile Include="Tests.fs" />
+    <Compile Include="RailwayNetworkTests.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
