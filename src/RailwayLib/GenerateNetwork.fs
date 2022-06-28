@@ -4,7 +4,7 @@ module GenerateNetwork =
 
     open AuxiliaryRailwayFunctions
 
-    let raiseNetworkError str = raise (NetworkError(str))
+    let raiseNetworkError str = raise <| NetworkError str
 
     /// Extract and apply port type to a point port.
     let toPort (id, portType) =
@@ -21,12 +21,11 @@ module GenerateNetwork =
             | None -> Map.add p1 p2 cs
             | Some _ -> raiseNetworkError $"Port \"%s{p1.ToString()}\" is not deterministic."
             
-        let rec processConnectionsAux (ls, ps, csUp, csDown as pt) =
-            function
+        let rec processConnectionsAux (ls, ps, csUp, csDown as pt) = function
             | [] -> pt
             | (s1, s2) :: cs -> 
                 let p1, p2 = toPort s1, toPort s2
-
+                
                 let ls', ps' =
                     match p1, p2 with
                     | L id1, L id2 -> Set.add id1 ls |> Set.add id2, ps
@@ -82,24 +81,19 @@ module GenerateNetwork =
             |> sprintf "Following signal(s) not placed on linear segment(s): %s"
             |> raiseNetworkError
 
-    /// Given a list of train tuples (start, destination) add them to a map if 
-    /// each train's start and destination is unique.
+    /// Given a list of train tuples (start, destination) add them to a map if  each train's start and destination is unique.
     let getTrainMap linearSegments trainsList = 
-        let rec collectTrains ls tsMap = 
-            function 
+        let rec collectTrains ls tsMap = function 
             | []  -> tsMap 
             | (t, _) :: _ | (_, t) :: _ when not (Set.contains t ls) -> 
-                $"Train starts or ends on %s{t} which is not a linear segment."
-                |> raiseNetworkError
+                raiseNetworkError $"Train starts or ends on %s{t} which is not a linear segment."
             | (t1, t2) :: _ when Map.exists (fun s d -> s = t1 || d = t2) tsMap -> 
-                $"Two trains start or end at %s{t1} or %s{t2}"
-                |> raiseNetworkError
+                raiseNetworkError $"Two trains start or end at %s{t1} or %s{t2}"
             | (t1, t2) :: ts -> collectTrains ls (Map.add t1 t2 tsMap) ts
 
         collectTrains linearSegments Map.empty trainsList
 
-    /// Check if a cycle is present in a network given the connections in an 
-    /// arbitrary direction.   
+    /// Check if a cycle is present in a network given the connections in an arbitrary direction.   
     let cycleCheck connectionsMap = 
         let rec dfsCycles connections port visited =
             if Set.contains port visited then
@@ -107,27 +101,25 @@ module GenerateNetwork =
             else
                 getNeighbours port connections
                 |> cycleCheckNeighbors connections (Set.add port visited) 
-        and cycleCheckNeighbors cs vs =
-            function
+        and cycleCheckNeighbors cs vs = function
             | [] -> false
             | p :: ns -> dfsCycles cs p vs || cycleCheckNeighbors cs vs ns
-            
-        let connectionInCycle fromPort _ = dfsCycles connectionsMap fromPort Set.empty
         
-        if Map.exists connectionInCycle connectionsMap then
+        if Map.exists (fun from _ -> dfsCycles connectionsMap from Set.empty) connectionsMap then
             raiseNetworkError "A cycle is present in the railway network."
 
     /// Convert lists of connections, signals, and trains to a railway network.
     let railwayParserOutputToNetwork (connectionList, signalList, trainList) =
         try 
-            let linearSegments, points, connectionsUp, connectionsDown = processConnections connectionList
+            let (linearSegments, points, connectionsUp, connectionsDown) = processConnections connectionList
 
             let signals = Set.ofList signalList
             let trains = getTrainMap linearSegments trainList
 
-            let fromPorts = Seq.toList (Map.keys connectionsUp)
-            let toPorts = Seq.toList (Map.values connectionsUp)
+            let fromPorts = Seq.toList <| Map.keys connectionsUp
+            let toPorts = Seq.toList <| Map.values connectionsUp
 
+            // Check other aspects of well-formedness. 
             uniqueIDCheck linearSegments points 
             pointInvariantCheck fromPorts toPorts points 
             signalPlacementCheck signals linearSegments 

@@ -2,9 +2,7 @@ namespace OnTheFlySolver
 
 module Player = 
 
-    type Player =
-        | One
-        | Two
+    type Player = One | Two
 
     let next player =
         match player with
@@ -15,7 +13,6 @@ module Solver =
 
     open System.Collections.Generic
     open Player 
-
 
     type Game<'S when 'S: comparison> = ('S -> Set<'S>) * ('S -> Set<'S>) * ('S -> bool)
 
@@ -40,14 +37,14 @@ module Solver =
         let mutable lose = Set.empty
 
         // Dependencies when processesing a given vertex.
-        let deps = new List<('S * Player * 'S) list>()
+        let deps = List<('S * Player * 'S) list>()
 
         // A set of already-discovered vertices.
-        let disc = new HashSet<Vertex>()
+        let disc = HashSet<Vertex>()
 
         // Connect internal (vertices) and external (configuration) representation.
-        let toConfig = new List<Config<'S>>()
-        let toVertex = new Dictionary<Config<'S>, Vertex>()
+        let toConfig = List<Config<'S>>()
+        let toVertex = Dictionary<Config<'S>, Vertex>()
 
         // Get the vertex of a given state if it exists. If not, create and return one.
         let vertexOf state =
@@ -67,7 +64,7 @@ module Solver =
             match player with
             | One ->
                 // Player One can also (always) perform the empty action, i.e. stay in current state.
-                edgesOne state |> Set.add state
+                 Set.add state <| edgesOne state
             | Two ->
                 let successorStates = edgesTwo state
 
@@ -90,12 +87,11 @@ module Solver =
                 | state', _ as config' -> (state, player, state') :: ws, Set.add config' ms
 
             // Tuple of the updated waiting list along with a set of min/max successors.
-            getSuccessorConfigs config
-            |> Set.fold (getNewSuccessors config) (wait, Set.empty)
-
-            // Only return the waiting list, _not_ the set of min/max successors.
+            Set.fold
+                (getNewSuccessors config)
+                (wait, Set.empty)
+                (getSuccessorConfigs config)
             |> fst
-
 
         let inLosingStrategy (state, player as config) =
             // The config simulates a losing strategy, or
@@ -169,8 +165,8 @@ module Solver =
             | [] -> foundWinningStrategy ()
             | _ when foundWinningOrLosingStrategy () -> foundWinningStrategy ()
             | (s1, i, _) :: waitrest when inWinLose (s1, i) -> loop waitrest
-            | (s1, i, _) :: waitrest when inLosingStrategy (s1, i) -> addTo (s1, i) &lose waitrest |> loop
-            | (s1, i, _) :: waitrest when inWinningStrategy (s1, i) -> addTo (s1, i) &win waitrest |> loop
+            | (s1, i, _) :: waitrest when inLosingStrategy (s1, i) -> loop <| addTo (s1, i) &lose waitrest
+            | (s1, i, _) :: waitrest when inWinningStrategy (s1, i) -> loop <| addTo (s1, i) &win waitrest
             | (_, i, s2) :: waitrest when inWinLose (s2, next i) -> loop waitrest
             | (s1, i, s2) :: waitrest when disc.Contains(vertexOf (s2, next i)) ->
                 let v = vertexOf (s2, next i)
@@ -183,10 +179,10 @@ module Solver =
                 deps.[v] <- [ (s1, i, s2) ]
 
                 if isGoalState s2 then 
-                    addTo config &win waitrest |> loop
+                    loop <| addTo config &win waitrest
                 else 
-                    addSuccessors config waitrest |> loop
-
+                    loop <| addSuccessors config waitrest
+                
         member _.solve =
             // Reset. 
             toVertex.Clear()
@@ -210,7 +206,7 @@ module Solver =
             |> addSuccessors initConfig
             |> loop
 
-
+    
     // Notes
     // - System.Collections.ArrayList is not recommended:
     //   https://docs.microsoft.com/en-us/dotnet/api/system.collections.arraylist?view=net-6.0#remarks

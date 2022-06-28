@@ -10,7 +10,6 @@
     <Compile Include="SimpleLiuSmolkaTests.fs" />
     <Compile Include="OnTheFlySolverTests.fs" />
     <Compile Include="RailwayNetworkTests.fs" />
-    <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />

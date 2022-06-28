@@ -37,49 +37,36 @@ let simpleGame =
 
 [<Fact>]
 let simpleGameSolved () =
-    let solver =
-        new OnTheFlySolver<string * string>(simpleGame, (=), (("L3", "-"), One))
-
-    Assert.True(solver.solve)
+    OnTheFlySolver<string * string>(simpleGame, (=), (("L3", "-"), One))
+    |> fun solver -> Assert.True(solver.solve)
 
 [<Fact>]
 let SimpleGameNotSolvable () =
-    let solver =
-        new OnTheFlySolver<string * string>(simpleGame, (=), (("L1", "+"), One))
-
-    Assert.False(solver.solve)
-
-let isTestFileSolvable testFileName = 
-    let network = 
-        loadTestFile testFileName 
-        |> parse 
-        |> railwayParserOutputToNetwork 
-
-    // Assert.True(isWellFormed network)
-
-    toSolver network
-    |> fun (solver: OnTheFlySolver<TrainGameState>) -> solver.solve
+    OnTheFlySolver<string * string>(simpleGame, (=), (("L1", "+"), One))
+    |> fun solver -> Assert.False(solver.solve)
+    
+[<Fact>]
+let simpleGamePlayerTwoStarts () =
+    OnTheFlySolver<string * string>(simpleGame, (=), (("L3", "-"), Two))
+    |> fun solver -> Assert.False(solver.solve)
 
 [<Fact>]
-let Kasting00Solved () = 
-    Assert.True(isTestFileSolvable "00-kasting.txt")
+let Kasting00Solved () = Assert.True(isTestFileSolvable "00-kasting.txt")
 
 [<Fact>]
-let KastingAlt01NotSolvable () = 
-    Assert.False(isTestFileSolvable "01-kasting-altered.txt")
+let KastingAlt01NotSolvable () = Assert.False(isTestFileSolvable "01-kasting-altered.txt")
 
 [<Fact>]
-let Branch05Solvable () = 
-    Assert.True(isTestFileSolvable "05-branch.txt")
+let Branch05Solvable () = Assert.True(isTestFileSolvable "05-branch.txt")
 
 [<Fact>]
-let KastingNoSignals06Unsolvable () = 
-    Assert.False(isTestFileSolvable "06-kasting-no-signals.txt")
+let KastingNoSignals06Unsolvable () = Assert.False(isTestFileSolvable "06-kasting-no-signals.txt")
 
 [<Fact>]
-let Lyngby07Solvable () = 
-    Assert.True(isTestFileSolvable "07-lyngby.txt")
+let Lyngby07Solvable () = Assert.True(isTestFileSolvable "07-lyngby.txt")
 
 [<Fact>]
-let Lyngby10Solvable () = 
-    Assert.True(isTestFileSolvable "10-lyngby-more-trains.txt")
+let Lyngby10Solvable () = Assert.True(isTestFileSolvable "10-lyngby-more-trains.txt")
+
+[<Fact>]
+let Florence11Solvable () = Assert.True(isTestFileSolvable "11-florence.txt")

@@ -1,14 +1,18 @@
 module TestUtils 
 
-open ProgramUtils 
+open ProgramUtils
+open RailwayLib
 open RailwayLib.GenerateNetwork
-
-let loadTestFile fileName =
-    __SOURCE_DIRECTORY__ + "/input/" + fileName 
-    |> System.IO.File.ReadAllText 
+open RailwayLib.ToGameSolver
+open OnTheFlySolver.Solver
 
 let testFileToNetwork filename = 
     __SOURCE_DIRECTORY__ + "/input/" + filename 
     |> System.IO.File.ReadAllText 
     |> parse 
     |> railwayParserOutputToNetwork
+    
+let isTestFileSolvable testFileName = 
+    testFileToNetwork testFileName   
+    |> toSolver 1
+    |> fun (solver: OnTheFlySolver<TrainGameState>) -> solver.solve

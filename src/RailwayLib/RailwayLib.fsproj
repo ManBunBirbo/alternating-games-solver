@@ -8,7 +8,7 @@
     <Compile Include="RailwayTypes.fs" />
     <Compile Include="AuxRailwayFuncs.fs" />
     <Compile Include="GenerateNetwork.fs" />
-    <Compile Include="RailwayGame.fs" />
+    <Compile Include="RailwayGameSolver.fs" />
     <FsYacc Include="RailwayParser.fsy">
       <OtherFlags>--module RailwayParser --open "RailwayLib"</OtherFlags>
     </FsYacc>

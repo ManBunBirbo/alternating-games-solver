@@ -27,3 +27,10 @@ let parse input =
             |> printfn "%s" 
         
         exit 1
+        
+/// Print a list of values in a readable format. 
+let rec printList separator = 
+    function 
+    | [] -> "" 
+    | [ s ] -> s.ToString() 
+    | s :: ls -> $"%s{s.ToString()} %s{separator} " + printList separator ls

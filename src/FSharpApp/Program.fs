@@ -9,15 +9,16 @@ open System.Timers
 // How to read a file: https://stackoverflow.com/a/2366649
 
 let isRailwayGameSolvable fileText = 
-    try 
-        // printfn "Parsing file and attempting to generate railway network."
+    try
+        printfn "Parsing file..."
+        
         let network = 
             parse fileText
             |> railwayParserOutputToNetwork
         
         printfn "File parsed successfully."
 
-        let solver = toSolver network
+        let solver = toSolver 1 network
 
         printfn "Analyzing if game can be solved..."
         
@@ -27,9 +28,10 @@ let isRailwayGameSolvable fileText =
 
         (if isSolvable then "" else "n't")
         |> printfn 
-            "In %f ms, analyzing %i states, it was determined that the railway network is%s solvable."
+            "In %f ms, analyzing %i different states, it was determined that the railway network is%s solvable."
             stopWatch.Elapsed.TotalMilliseconds
             (getNoOfStates ())
+
     with
         | :? NetworkError as err -> 
             printfn $"NetworkError: %s{err.Message}"
